@@ -1,0 +1,19 @@
+settings
+options
+java 
+collection class --> indicar como se traduce ( List <Hash> ) 
+generate ( selected elements ) 
+seleccionar carpeta ( llamarlo src ) y guardarlo dentro 
+si vamos a la carpeta se verá lo creado 
+a lo mejor hay alguno que se ha generado mal y es .java ( tenemos que ponerle el nombre de la clase que sea ) 
+
+
+Mientras estamos haciendo el codigo 
+Los objetos tienen que ser estáticos o sino podemos hacer que en el diagrama cambie de una relacion a una flecha de uso ( esta ultima solucion es mala ) 
+
+Metodo init sirve para inicializar todo , metemos todos los atributos iniciados dentro de init
+
+Como no tenemos una base de datos, lo primero que hacemos es crear las variables necesarias que se supone que tienen que estar ( los admins en nuestra practica ) 
+
+Si tenemos alguna variable que entre como parametro a una funcion ( una variable que recibe un parametro de tipo Interfaz , lo solucionamos cambiando el tipo en la clase al tipo de Interfaz ) Al cambiar esto , se realiza el principio de inversion de dependencias , tenemos que arreglar el diagrama haciendo que en vez de que el producto dependa del controlador , tiene que depender la interfaz del controlador 
+
