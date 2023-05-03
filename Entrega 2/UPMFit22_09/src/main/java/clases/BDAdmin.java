@@ -1,3 +1,4 @@
+package clases;
 
 
 /**
@@ -18,7 +19,7 @@ public class BDAdmin implements IAccesoBDAdmin {
 	 * 
 	 * @param admin
 	 */
-	public actualizar(Administrador admin){
+	public void actualizar(Administrador admin){
 
 	}
 
@@ -26,7 +27,7 @@ public class BDAdmin implements IAccesoBDAdmin {
 	 * 
 	 * @param num
 	 */
-	public borrar(int num){
+	public void borrar(int num){
 
 	}
 
@@ -34,7 +35,7 @@ public class BDAdmin implements IAccesoBDAdmin {
 	 * 
 	 * @param admin
 	 */
-	public insertar(Administrador admin){
+	public void  insertar(Administrador admin){
 
 	}
 
@@ -42,7 +43,7 @@ public class BDAdmin implements IAccesoBDAdmin {
 	 * 
 	 * @param num
 	 */
-	public seleccionar(int num){
+	public void  seleccionar(int num){
 
 	}
 }//end BDAdmin

@@ -1,3 +1,4 @@
+package clases;
 
 
 /**
@@ -20,7 +21,7 @@ public class Administrador extends UsuarioGenerico implements InterfazAdministra
 
 	}
 
-	public destroy(){
+	public void destroy(){
 
 	}
 
@@ -31,12 +32,12 @@ public class Administrador extends UsuarioGenerico implements InterfazAdministra
 	/**
 	 * 
 	 * @param numeroTelf
-	 * @param contraseña
+	 * @param contraseï¿½a
 	 * @param correoElectronico
 	 * @param nombre
 	 * @param nombreUsuario
 	 */
-	public new(int numeroTelf, String contraseña, String correoElectronico, String nombre, String nombreUsuario){
+	public Administrador(int numeroTelf, String contrasena, String correoElectronico, String nombre, String nombreUsuario){
 
 	}
 

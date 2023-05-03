@@ -9,7 +9,7 @@ public interface InterfazAdministrador {
 
 	public void altaMonitor();
 
-	public double getTelefono();
+	public int getTelefono();
 
 	/**
 	 * 
