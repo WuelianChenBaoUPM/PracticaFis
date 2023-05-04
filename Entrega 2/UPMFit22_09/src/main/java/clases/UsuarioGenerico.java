@@ -1,3 +1,4 @@
+package clases;
 
 
 /**
@@ -7,7 +8,7 @@
  */
 public class UsuarioGenerico implements InterfazUsuarioGenerico {
 
-	private String contraseña;
+	private String contrasena;
 	private String correoElectronico;
 	private String nombre;
 	private String nombreUsuario;
@@ -15,15 +16,19 @@ public class UsuarioGenerico implements InterfazUsuarioGenerico {
 	public UsuarioGenerico(){
 
 	}
+	
+	public String gentContrasena() {
+		return this.contrasena; 
+	}
 
 	public void finalize() throws Throwable {
 
 	}
-	public destroy(){
+	public void destroy(){
 
 	}
 
-	public String getContraseña(){
+	public String getContrasena(){
 		return "";
 	}
 
@@ -49,16 +54,16 @@ public class UsuarioGenerico implements InterfazUsuarioGenerico {
 
 	/**
 	 * 
-	 * @param contraseña
+	 * @param contraseï¿½a
 	 * @param nombre
 	 * @param nombreUsuario
 	 * @param correoElectronico
 	 */
-	public new(String contraseña, String nombre, String nombreUsuario, String correoElectronico){
+	public UsuarioGenerico(String contrasena, String nombre, String nombreUsuario, String correoElectronico){
 
 	}
 
-	public void setContraseña(){
+	public void setContrasena(){
 
 	}
 
@@ -84,9 +89,9 @@ public class UsuarioGenerico implements InterfazUsuarioGenerico {
 
 	/**
 	 * 
-	 * @param contraseña
+	 * @param contraseï¿½a
 	 */
-	public void setContraseña(String contraseña){
+	public void setContrasena(String contrasena){
 
 	}
 
@@ -105,4 +110,5 @@ public class UsuarioGenerico implements InterfazUsuarioGenerico {
 	public void setNombre(String nombre){
 
 	}
-}//end UsuarioGenerico
+
+}

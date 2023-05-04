@@ -1,3 +1,5 @@
+package clases;
+
 
 
 /**
@@ -15,6 +17,6 @@ public interface InterfazAdministrador {
 	 * 
 	 * @param numTelefono
 	 */
-	public void setNumTelefono(double numTelefono);
+	public void setNumTelefono(int numTelefono);
 
 }

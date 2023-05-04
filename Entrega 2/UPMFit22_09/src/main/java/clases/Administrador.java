@@ -26,7 +26,7 @@ public class Administrador extends UsuarioGenerico implements InterfazAdministra
 	}
 
 	public int getTelefono(){
-		return 0;
+		return this.numeroDeTelefono;
 	}
 
 	/**
@@ -45,15 +45,17 @@ public class Administrador extends UsuarioGenerico implements InterfazAdministra
 	 * 
 	 * @param numeroTelefono
 	 */
-	public void setNumeroDeTelefono(int numeroTelefono){
+	
 
+	@Override
+	public void setNumTelefono(int numTelefono) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	/**
 	 * 
 	 * @param numTelefono
 	 */
-	public void setNumTelefono(double numTelefono){
-
-	}
+	
 }//end Administrador

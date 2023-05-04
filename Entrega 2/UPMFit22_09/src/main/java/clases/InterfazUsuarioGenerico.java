@@ -1,3 +1,4 @@
+package clases;
 
 
 /**
@@ -7,7 +8,7 @@
  */
 public interface InterfazUsuarioGenerico {
 
-	public String getContraseña();
+	public String getContrasena();
 
 	public String getCorreo();
 
@@ -21,9 +22,9 @@ public interface InterfazUsuarioGenerico {
 
 	/**
 	 * 
-	 * @param contraseña
+	 * @param contraseï¿½a
 	 */
-	public void setContraseña(String contraseña);
+	public void setContrasena(String contrasena);
 
 	/**
 	 * 

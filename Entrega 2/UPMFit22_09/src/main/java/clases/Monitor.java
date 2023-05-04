@@ -28,12 +28,12 @@ public class Monitor extends UsuarioNoAdmin implements InterfazMonitor {
 	 * 
 	 * @param numeroDeCuenta
 	 * @param dni
-	 * @param contraseña
+	 * @param contraseï¿½a
 	 * @param correoElectronico
 	 * @param nombre
 	 * @param nombreUsuario
 	 */
-	public void new(int numeroDeCuenta, String dni, String contraseña, String correoElectronico, String nombre, String nombreUsuario){
+	public void new(int numeroDeCuenta, String dni, String contraseï¿½a, String correoElectronico, String nombre, String nombreUsuario){
 
 	}
 
