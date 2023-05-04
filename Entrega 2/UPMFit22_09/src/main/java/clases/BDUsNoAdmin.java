@@ -1,3 +1,4 @@
+package clases;
 
 
 /**
@@ -18,7 +19,7 @@ public class BDUsNoAdmin implements IAccesoBDUSNoAdmin {
 	 * 
 	 * @param usNoAdmin
 	 */
-	public actualizar(UsuarioNoAdmin usNoAdmin){
+	public void actualizar(UsuarioNoAdmin usNoAdmin){
 
 	}
 
@@ -26,7 +27,7 @@ public class BDUsNoAdmin implements IAccesoBDUSNoAdmin {
 	 * 
 	 * @param dni
 	 */
-	public borrar(String dni){
+	public void borrar(String dni){
 
 	}
 
@@ -34,7 +35,7 @@ public class BDUsNoAdmin implements IAccesoBDUSNoAdmin {
 	 * 
 	 * @param usNoAdmin
 	 */
-	public insertar(UsuarioNoAdmin usNoAdmin){
+	public void insertar(UsuarioNoAdmin usNoAdmin){
 
 	}
 
@@ -42,7 +43,7 @@ public class BDUsNoAdmin implements IAccesoBDUSNoAdmin {
 	 * 
 	 * @param dni
 	 */
-	public seleccionar(String dni){
+	public void seleccionar(String dni){
 
 	}
 }//end BDUsNoAdmin

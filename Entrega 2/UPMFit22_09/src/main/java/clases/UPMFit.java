@@ -1,3 +1,4 @@
+package clases;
 
 
 /**
@@ -7,7 +8,7 @@
  */
 public class UPMFit {
 
-	public <<controller>ControladorUsGenerico m_<<controller>ControladorUsGenerico;
+
 	public ControladorAdmin m_ControladorAdmin;
 	public ControladorCliente m_ControladorCliente;
 	public ControladorMonitor m_ControladorMonitor;

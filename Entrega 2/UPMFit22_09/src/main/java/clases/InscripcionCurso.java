@@ -1,3 +1,4 @@
+package clases;
 
 
 /**
@@ -18,7 +19,7 @@ public class InscripcionCurso {
 	public void finalize() throws Throwable {
 
 	}
-	public destroy(){
+	public void  destroy(){
 
 	}
 
@@ -30,7 +31,7 @@ public class InscripcionCurso {
 	 * 
 	 * @param fechaInscripcion
 	 */
-	public new(int fechaInscripcion){
+	public InscripcionCurso(int fechaInscripcion){
 
 	}
 

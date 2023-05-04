@@ -1,3 +1,4 @@
+package clases;
 
 
 /**
@@ -16,7 +17,7 @@ public class SesionCerrada extends Sesion implements InterfazSesion {
 	public void finalize() throws Throwable {
 		super.finalize();
 	}
-	public destroy(){
+	public void destroy(){
 
 	}
 
@@ -43,7 +44,7 @@ public class SesionCerrada extends Sesion implements InterfazSesion {
 	 * @param horaFin
 	 * @param horaIncio
 	 */
-	public new(TActividad actividad, int aforo, int horaFin, int horaIncio){
+	public SesionCerrada(TActividad actividad, int aforo, int horaFin, int horaIncio){
 
 	}
 

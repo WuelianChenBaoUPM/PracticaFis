@@ -1,3 +1,4 @@
+package clases;
 
 
 /**
@@ -5,7 +6,7 @@
  * @version 1.0
  * @created 28-abr.-2023 0:11:48
  */
-public class UsuarioNoAdmin extends UsuarioGenerico implements Interfaz Usuario No Admin {
+public class UsuarioNoAdmin extends UsuarioGenerico {
 
 	private String dni;
 
@@ -16,7 +17,7 @@ public class UsuarioNoAdmin extends UsuarioGenerico implements Interfaz Usuario 
 	public void finalize() throws Throwable {
 		super.finalize();
 	}
-	public destroy(){
+	public void destroy(){
 
 	}
 
@@ -27,15 +28,12 @@ public class UsuarioNoAdmin extends UsuarioGenerico implements Interfaz Usuario 
 	/**
 	 * 
 	 * @param dni
-	 * @param contraseña
+	 * @param contraseï¿½a
 	 * @param correoElectronico
 	 * @param nombre
 	 * @param nombreUsuario
 	 */
-	public new(String dni, String contraseña, String correoElectronico, String nombre, String nombreUsuario){
-
-	}
-
+	
 	/**
 	 * 
 	 * @param dni

@@ -1,3 +1,4 @@
+package clases;
 
 
 /**
@@ -11,24 +12,24 @@ public interface IAccesoBDAdmin {
 	 * 
 	 * @param admin
 	 */
-	public actualizar(Administrador admin);
+	public void  actualizar(Administrador admin);
 
 	/**
 	 * 
 	 * @param num
 	 */
-	public borrar(int num);
+	public void  borrar(int num);
 
 	/**
 	 * 
 	 * @param admin
 	 */
-	public insertar(Administrador admin);
+	public void  insertar(Administrador admin);
 
 	/**
 	 * 
 	 * @param num
 	 */
-	public seleccionar(int num);
+	public void  seleccionar(int num);
 
 }

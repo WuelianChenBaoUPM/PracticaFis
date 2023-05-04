@@ -1,3 +1,4 @@
+package clases;
 
 
 /**
@@ -14,9 +15,7 @@ public class viewAdministrador {
 	public void finalize() throws Throwable {
 
 	}
-	public void new(){
-
-	}
+	 
 
 	public void renderAdmin(){
 

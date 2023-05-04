@@ -1,3 +1,4 @@
+package clases;
 
 
 /**
@@ -11,24 +12,24 @@ public interface IAccesoBDMonitor {
 	 * 
 	 * @param monitor
 	 */
-	public actualizar(Monitor monitor);
+	public void  actualizar(Monitor monitor);
 
 	/**
 	 * 
 	 * @param monitor
 	 */
-	public borrar(Monitor monitor);
+	public void  borrar(Monitor monitor);
 
 	/**
 	 * 
 	 * @param monitor
 	 */
-	public insertar(Monitor monitor);
+	public void  insertar(Monitor monitor);
 
 	/**
 	 * 
 	 * @param monitor
 	 */
-	public seleccionar(Monitor monitor);
+	public void  seleccionar(Monitor monitor);
 
 }

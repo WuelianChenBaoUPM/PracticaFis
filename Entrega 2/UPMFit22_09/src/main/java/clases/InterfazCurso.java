@@ -1,3 +1,4 @@
+package clases;
 
 
 /**
@@ -7,11 +8,11 @@
  */
 public interface InterfazCurso {
 
-	public date getFechaFin();
+	public String getFechaFin();
 
-	public date getFechaInicio();
+	public String getFechaInicio();
 
-	public time getHorario();
+	public String getHorario();
 
 	public String getNombre();
 
@@ -19,13 +20,13 @@ public interface InterfazCurso {
 	 * 
 	 * @param fecha
 	 */
-	public void setFechaFin(date fecha);
+	public void setFechaFin(String fecha);
 
 	/**
 	 * 
 	 * @param fecha
 	 */
-	public void setFechaInicio(date fecha);
+	public void setFechaInicio(String fecha);
 
 	/**
 	 * 

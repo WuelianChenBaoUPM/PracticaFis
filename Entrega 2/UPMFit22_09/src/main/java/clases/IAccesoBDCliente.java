@@ -1,3 +1,4 @@
+package clases;
 
 
 /**
@@ -11,24 +12,24 @@ public interface IAccesoBDCliente {
 	 * 
 	 * @param cliente
 	 */
-	public actualizar(Cliente cliente);
+	public void  actualizar(Cliente cliente);
 
 	/**
 	 * 
 	 * @param cliente
 	 */
-	public borrar(Cliente cliente);
+	public void   borrar(Cliente cliente);
 
 	/**
 	 * 
 	 * @param cliente
 	 */
-	public insertar(Cliente cliente);
+	public void  insertar(Cliente cliente);
 
 	/**
 	 * 
 	 * @param cliente
 	 */
-	public seleccionar(Cliente cliente);
+	public void  seleccionar(Cliente cliente);
 
 }

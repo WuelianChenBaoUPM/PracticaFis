@@ -1,3 +1,4 @@
+package clases;
 
 
 /**
@@ -18,7 +19,7 @@ public class BDUsGenerico implements IAccesoBDUsuarioGenerico {
 	 * 
 	 * @param usGenerico
 	 */
-	public actualizar(UsuarioGenerico usGenerico){
+	public void actualizar(UsuarioGenerico usGenerico){
 
 	}
 
@@ -26,7 +27,7 @@ public class BDUsGenerico implements IAccesoBDUsuarioGenerico {
 	 * 
 	 * @param nombreUsuario
 	 */
-	public borrar(String nombreUsuario){
+	public void borrar(String nombreUsuario){
 
 	}
 
@@ -34,7 +35,7 @@ public class BDUsGenerico implements IAccesoBDUsuarioGenerico {
 	 * 
 	 * @param usGenerico
 	 */
-	public insertar(UsuarioGenerico usGenerico){
+	public void insertar(UsuarioGenerico usGenerico){
 
 	}
 
@@ -42,7 +43,7 @@ public class BDUsGenerico implements IAccesoBDUsuarioGenerico {
 	 * 
 	 * @param nombreUsuario
 	 */
-	public seleccionar(String nombreUsuario){
+	public void seleccionar(String nombreUsuario){
 
 	}
 }//end BDUsGenerico

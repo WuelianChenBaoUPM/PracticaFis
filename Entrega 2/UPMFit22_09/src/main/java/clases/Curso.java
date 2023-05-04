@@ -1,3 +1,4 @@
+package clases;
 
 
 /**
@@ -13,8 +14,8 @@ public class Curso implements InterfazCurso {
 	private int horario;
 	private String nombre;
 	public SesionCerrada SesionCerrada;
-	public <<controlador>> ListaCursos m_<<controlador>> ListaCursos;
-	public ViewSesionCerrada m_ViewSesionCerrada;
+	// public   ListaCursos  m_ListaCursos;
+	public ViewSesionCerrada  m_ViewSesionCerrada;
 
 	public Curso(){
 
@@ -27,20 +28,20 @@ public class Curso implements InterfazCurso {
 		return null;
 	}
 
-	public destroy(){
+	public void destroy(){
 
 	}
 
-	public int getFechaFin(){
-		return 0;
+	public String  getFechaFin(){
+		return "";
 	}
 
-	public int getFechaInicio(){
-		return 0;
+	public String getFechaInicio(){
+		return "" ;
 	}
 
-	public int getHorario(){
-		return 0;
+	public String getHorario(){
+		return "";
 	}
 
 	public String getNombre(){
@@ -58,7 +59,7 @@ public class Curso implements InterfazCurso {
 	 * @param horario
 	 * @param nombre
 	 */
-	public new(int fechaInicio, int fechaFin, int horario, String nombre){
+	public Curso(int fechaInicio, int fechaFin, int horario, String nombre){
 
 	}
 
@@ -86,7 +87,7 @@ public class Curso implements InterfazCurso {
 	 * 
 	 * @param fecha
 	 */
-	public void setFechaFin(date fecha){
+	public void setFechaFin(String fecha){
 
 	}
 
@@ -94,7 +95,7 @@ public class Curso implements InterfazCurso {
 	 * 
 	 * @param fecha
 	 */
-	public void setFechaInicio(date fecha){
+	public void setFechaInicio(String fecha){
 
 	}
 

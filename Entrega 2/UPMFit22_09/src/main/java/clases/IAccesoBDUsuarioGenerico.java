@@ -1,3 +1,4 @@
+package clases;
 
 
 /**
@@ -11,24 +12,24 @@ public interface IAccesoBDUsuarioGenerico {
 	 * 
 	 * @param usGenerico
 	 */
-	public actualizar(UsuarioGenerico usGenerico);
+	public void  actualizar(UsuarioGenerico usGenerico);
 
 	/**
 	 * 
 	 * @param nombreUsuario
 	 */
-	public borrar(String nombreUsuario);
+	public void   borrar(String nombreUsuario);
 
 	/**
 	 * 
 	 * @param usGenerico
 	 */
-	public insertar(UsuarioGenerico usGenerico);
+	public void  insertar(UsuarioGenerico usGenerico);
 
 	/**
 	 * 
 	 * @param nombreUsuario
 	 */
-	public seleccionar(String nombreUsuario);
+	public void  seleccionar(String nombreUsuario);
 
 }

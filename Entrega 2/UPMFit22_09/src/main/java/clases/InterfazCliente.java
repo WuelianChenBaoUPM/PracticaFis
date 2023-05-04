@@ -1,3 +1,5 @@
+package clases;
+
 
 
 /**
@@ -13,7 +15,7 @@ public interface InterfazCliente {
 
 	public String getSexo();
 
-	public String getTarjeta();
+	public int getTarjeta();
 
 	/**
 	 * 

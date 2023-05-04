@@ -1,3 +1,4 @@
+package clases;
 
 
 /**
@@ -18,7 +19,7 @@ public class BDCurso implements IAccesoBDCurso {
 	 * 
 	 * @param curso
 	 */
-	public actualizar(Curso curso){
+	public void actualizar(Curso curso){
 
 	}
 
@@ -26,7 +27,7 @@ public class BDCurso implements IAccesoBDCurso {
 	 * 
 	 * @param curso
 	 */
-	public borrar(Curso curso){
+	public void borrar(Curso curso){
 
 	}
 
@@ -34,7 +35,7 @@ public class BDCurso implements IAccesoBDCurso {
 	 * 
 	 * @param curso
 	 */
-	public insertar(Curso curso){
+	public void insertar(Curso curso){
 
 	}
 
@@ -42,7 +43,7 @@ public class BDCurso implements IAccesoBDCurso {
 	 * 
 	 * @param curso
 	 */
-	public seleccionar(Curso curso){
+	public void seleccionar(Curso curso){
 
 	}
 }//end BDCurso

@@ -1,3 +1,4 @@
+package clases;
 
 
 /**
@@ -18,7 +19,7 @@ public class BDMonitor implements IAccesoBDMonitor {
 	 * 
 	 * @param monitor
 	 */
-	public actualizar(Monitor monitor){
+	public void  actualizar(Monitor monitor){
 
 	}
 
@@ -26,7 +27,15 @@ public class BDMonitor implements IAccesoBDMonitor {
 	 * 
 	 * @param monitor
 	 */
-	public borrar(Monitor monitor){
+	public void  borrar(Monitor monitor){
+ 
+	}
+
+	/**
+	 * 
+	 * @param monitor
+	 */
+	public void insertar(Monitor monitor){
 
 	}
 
@@ -34,15 +43,7 @@ public class BDMonitor implements IAccesoBDMonitor {
 	 * 
 	 * @param monitor
 	 */
-	public insertar(Monitor monitor){
-
-	}
-
-	/**
-	 * 
-	 * @param monitor
-	 */
-	public seleccionar(Monitor monitor){
+	public void seleccionar(Monitor monitor){
 
 	}
 }//end BDMonitor

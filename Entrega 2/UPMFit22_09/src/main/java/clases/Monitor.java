@@ -1,3 +1,5 @@
+package clases;
+
 
 
 /**
@@ -20,8 +22,8 @@ public class Monitor extends UsuarioNoAdmin implements InterfazMonitor {
 
 	}
 
-	public int getNumeroCuenta(){
-		return 0;
+	public String getNumeroCuenta(){
+		return "";
 	}
 
 	/**
@@ -33,7 +35,7 @@ public class Monitor extends UsuarioNoAdmin implements InterfazMonitor {
 	 * @param nombre
 	 * @param nombreUsuario
 	 */
-	public void new(int numeroDeCuenta, String dni, String contrase�a, String correoElectronico, String nombre, String nombreUsuario){
+	public Monitor(int numeroDeCuenta, String dni, String contrasena, String correoElectronico, String nombre, String nombreUsuario){
 
 	}
 

@@ -1,3 +1,4 @@
+package clases;
 
 
 /**
@@ -15,9 +16,7 @@ public class ViewSesionCerrada {
 	public void finalize() throws Throwable {
 
 	}
-	public void new(){
-
-	}
+	
 
 	public void renderLisatSesionesCerradas(){
 

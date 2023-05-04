@@ -1,3 +1,5 @@
+package clases;
+
 
 
 /**
@@ -8,7 +10,7 @@
 public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 
 	private int edad;
-	private double peso;
+	private float peso;
 	private String sexo;
 	private int tarjetaCredito;
 
@@ -19,7 +21,7 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	public void finalize() throws Throwable {
 		super.finalize();
 	}
-	public destroy(){
+	public void destroy(){
 
 	}
 
@@ -27,7 +29,7 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 		return 0;
 	}
 
-	public double getPeso(){
+	public float getPeso(){
 		return 0;
 	}
 
@@ -46,12 +48,12 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	 * @param peso
 	 * @param tarjeta
 	 * @param dni
-	 * @param contraseña
+	 * @param contraseï¿½a
 	 * @param correo
 	 * @param nombre
 	 * @param nombreUsuario
 	 */
-	public new(int edad, String sexo, double peso, int tarjeta, String dni, String contraseña, String correo, String nombre, String nombreUsuario){
+	public Cliente(int edad, String sexo, double peso, int tarjeta, String dni, String contrasena, String correo, String nombre, String nombreUsuario){
 
 	}
 

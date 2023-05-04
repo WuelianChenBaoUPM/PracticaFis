@@ -1,3 +1,4 @@
+package clases;
 
 
 /**
@@ -18,7 +19,7 @@ public class BDCliente implements IAccesoBDCliente {
 	 * 
 	 * @param cliente
 	 */
-	public actualizar(Cliente cliente){
+	public void actualizar(Cliente cliente){
 
 	}
 
@@ -26,7 +27,7 @@ public class BDCliente implements IAccesoBDCliente {
 	 * 
 	 * @param cliente
 	 */
-	public borrar(Cliente cliente){
+	public void borrar(Cliente cliente){
 
 	}
 
@@ -34,7 +35,7 @@ public class BDCliente implements IAccesoBDCliente {
 	 * 
 	 * @param cliente
 	 */
-	public insertar(Cliente cliente){
+	public void  insertar(Cliente cliente){
 
 	}
 
@@ -42,7 +43,7 @@ public class BDCliente implements IAccesoBDCliente {
 	 * 
 	 * @param cliente
 	 */
-	public seleccionar(Cliente cliente){
+	public void  seleccionar(Cliente cliente){
 
 	}
 }//end BDCliente

@@ -1,3 +1,4 @@
+package clases;
 
 
 /**
@@ -11,24 +12,24 @@ public interface IAccesoBDUSNoAdmin {
 	 * 
 	 * @param usNoAdmin
 	 */
-	public actualizar(UsuarioNoAdmin usNoAdmin);
+	public void  actualizar(UsuarioNoAdmin usNoAdmin);
 
 	/**
 	 * 
 	 * @param dni
 	 */
-	public borrar(String dni);
+	public void  borrar(String dni);
 
 	/**
 	 * 
 	 * @param usNoAdmin
 	 */
-	public insertar(UsuarioNoAdmin usNoAdmin);
+	public void  insertar(UsuarioNoAdmin usNoAdmin);
 
 	/**
 	 * 
 	 * @param dni
 	 */
-	public seleccionar(String dni);
+	public void  seleccionar(String dni);
 
 }

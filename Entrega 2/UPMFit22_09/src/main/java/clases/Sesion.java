@@ -1,3 +1,4 @@
+package clases;
 
 
 /**
@@ -19,7 +20,7 @@ public class Sesion implements InterfazSesion {
 	public void finalize() throws Throwable {
 
 	}
-	public destroy(){
+	public void destroy(){
 
 	}
 
@@ -46,7 +47,7 @@ public class Sesion implements InterfazSesion {
 	 * @param horaFin
 	 * @param horaInicio
 	 */
-	public new(int actividad, int aforo, int horaFin, int horaInicio){
+	public Sesion(int actividad, int aforo, int horaFin, int horaInicio){
 
 	}
 

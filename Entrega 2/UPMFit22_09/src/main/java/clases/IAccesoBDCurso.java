@@ -1,3 +1,4 @@
+package clases;
 
 
 /**
@@ -11,24 +12,24 @@ public interface IAccesoBDCurso {
 	 * 
 	 * @param curso
 	 */
-	public actualizar(Curso curso);
+	public void  actualizar(Curso curso);
 
 	/**
 	 * 
 	 * @param curso
 	 */
-	public borrar(Curso curso);
+	public void  borrar(Curso curso);
 
 	/**
 	 * 
 	 * @param curso
 	 */
-	public insertar(Curso curso);
+	public void  insertar(Curso curso);
 
 	/**
 	 * 
 	 * @param curso
 	 */
-	public seleccionar(Curso curso);
+	public void   seleccionar(Curso curso);
 
 }
