@@ -1,1 +1,8 @@
-Clase Admin , UsuarioGenerico y sus interfaces arregladas
+Recordar que en el diagrama hay que heredar las interfaces de usuarios 
+
+Clase Admin , UsuarioGenerico y sus interfaces arregladas, cambiados los tipos que returnan las funciones 
+
+Arreglado UsuarioNoAdmin , por alguna razon hay una implementacion de InterfazUSNOADMIN
+
+Cliente arreglado , funciones que no devuelven cosas que no tienen que devolver
+Monitor
