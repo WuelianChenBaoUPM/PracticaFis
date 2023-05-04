@@ -41,7 +41,7 @@ public class Curso implements InterfazCurso {
 	}
 
 	public String getHorario(){
-		return "";
+		return " ";
 	}
 
 	public String getNombre(){
