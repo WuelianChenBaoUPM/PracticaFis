@@ -7,7 +7,7 @@ package clases;
  * @created 28-abr.-2023 0:12:08
  */
 public interface InterfazUsuarioGenerico {
-
+ 
 	public String getContrasena();
 
 	public String getCorreo();

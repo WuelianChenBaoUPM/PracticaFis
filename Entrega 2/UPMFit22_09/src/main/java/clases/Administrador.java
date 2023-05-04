@@ -45,7 +45,7 @@ public class Administrador extends UsuarioGenerico implements InterfazAdministra
 	 * 
 	 * @param numeroTelefono
 	 */
-	
+	 
 
 	@Override
 	public void setNumTelefono(int numTelefono) {
