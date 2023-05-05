@@ -9,3 +9,4 @@ Monitor
 
 View Sistema falta 
 Añadir los roles en las relaciones
+Inscripcion curso tiene relacion con los controladores de Curso y de Cliente
