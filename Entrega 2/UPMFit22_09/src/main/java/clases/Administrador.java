@@ -39,7 +39,7 @@ public class Administrador extends UsuarioGenerico implements InterfazAdministra
 	 */
 	public Administrador(int numeroTelf, String contrasena, String correoElectronico, String nombre, String nombreUsuario){
 
-	}
+	} 
 
 	/**
 	 * 
