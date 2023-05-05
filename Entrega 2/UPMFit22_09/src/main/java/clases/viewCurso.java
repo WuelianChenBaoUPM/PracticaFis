@@ -24,4 +24,12 @@ public class viewCurso {
 	public void renderListaCursos(){
 
 	}
+	
+	public void visualizarCurso(InterfazCurso interfaz) {
+		
+		
+		
+	}
+	
+	
 }//end viewCurso
