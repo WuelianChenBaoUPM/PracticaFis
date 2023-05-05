@@ -40,6 +40,7 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	public int getTarjeta(){
 		return 0;
 	}
+	//hola
 
 	/**
 	 * 
