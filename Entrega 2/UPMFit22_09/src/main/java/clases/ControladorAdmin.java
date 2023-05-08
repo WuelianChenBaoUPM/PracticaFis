@@ -8,6 +8,8 @@ package clases;
  */
 public class ControladorAdmin {
 
+	
+	
 	public viewAdministrador m_viewAdministrador;
 	public Administrador m_Administrador;
 
