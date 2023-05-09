@@ -34,7 +34,7 @@ public class ControladorAdmin {
 	}
 	//metodos relacion con Admin
 	
-		public void setAdmin(List<Administrador> admins) {
+		public void setAdmin(List<Administrador> admins)  {
 			
 		}
 		

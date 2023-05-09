@@ -31,7 +31,7 @@ public class ControladorMonitor {
 	
 	//metodos relacion con Monitor
 	
-		public void setMonitor(List<Monitor> monitores) {
+		public void setMonitor(List<Monitor> monitores)  {
 				
 			}
 			

@@ -30,7 +30,7 @@ public class ControladorCurso {
 	
 	//metodos relacion con curso
 	
-	public void setCurso(List<Curso> cursos) {
+	public void setCurso(List<Curso> cursos)  {
 		
 	}
 	

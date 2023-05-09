@@ -6,7 +6,7 @@ package clases;
  * @version 1.0
  * @created 28-abr.-2023 0:11:49
  */
-public class Administrador extends UsuarioGenerico implements InterfazAdministrador {
+public class Administrador extends UsuarioGenerico implements InterfazAdministrador  {
 
 	private int numeroDeTelefono;
  

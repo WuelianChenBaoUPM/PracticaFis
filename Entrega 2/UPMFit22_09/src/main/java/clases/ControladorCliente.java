@@ -31,7 +31,7 @@ public class ControladorCliente {
 	
 	//metodos de la relacion con cliente
 	
-		public void setCliente(List<Cliente> clientes) {
+		public void setCliente(List<Cliente> clientes)  {
 				
 			}
 		

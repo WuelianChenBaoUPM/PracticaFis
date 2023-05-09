@@ -59,7 +59,7 @@ public class Monitor extends UsuarioNoAdmin implements InterfazMonitor {
 	
 	//metodos de la relacion con SesionCerrada
 	
-	public void setSesiones(List<SesionCerrada> sesiones) {
+	public void setSesiones(List<SesionCerrada> sesiones)  {
 		
 	}
 	

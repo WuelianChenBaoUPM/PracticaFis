@@ -52,7 +52,7 @@ public class InscripcionCurso {
 		return null;
 	}
 	
-	public void setCliente(Cliente cliente) {
+	public void setCliente(Cliente cliente)  {
 		
 	}
 			

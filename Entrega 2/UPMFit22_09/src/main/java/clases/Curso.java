@@ -137,7 +137,7 @@ public class Curso implements InterfazCurso {
 	}
 	//metodos de la relacion con Cliente-InscripcionCurso
 	
-	public void setInscripciones(List<InscripcionCurso> inscripciones) {
+	public void setInscripciones(List<InscripcionCurso> inscripciones)  {
 				
 	}
 			

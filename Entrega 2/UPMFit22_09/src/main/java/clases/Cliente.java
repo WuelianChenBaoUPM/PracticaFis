@@ -109,7 +109,7 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	
 	//metodos de la relacion con Curso-InscripcionCurso
 	
-	public void setInscripciones(List<InscripcionCurso> inscripciones) {
+	public void setInscripciones(List<InscripcionCurso> inscripciones)  {
 			
 	}
 		
