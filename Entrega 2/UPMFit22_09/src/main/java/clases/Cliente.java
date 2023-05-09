@@ -1,6 +1,6 @@
 package clases;
 
-
+import java.util.List;
 
 /**
  * @author The Administrator
@@ -9,6 +9,8 @@ package clases;
  */
 public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 
+	
+	private List<InscripcionCurso> inscripciones;
 	private int edad;
 	private float peso;
 	private String sexo;
@@ -40,7 +42,6 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	public int getTarjeta(){
 		return 0;
 	}
-	//hola
  
 	/**
 	 * 
@@ -104,5 +105,23 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	 */
 	public void setTarjeta(String tarjeta){
 
+	}
+	
+	//metodos de la relacion con Curso-InscripcionCurso
+	
+	public void setInscripciones(List<InscripcionCurso> inscripciones) {
+			
+	}
+		
+	public List<InscripcionCurso> getInscripciones(){
+		return null;
+	}
+		
+	public void addInscripcionCurso(InscripcionCurso inscripcion) {
+			
+	}
+		
+	public void removeInscripcionCurso (InscripcionCurso inscripcion) {
+			
 	}
 }//end Cliente

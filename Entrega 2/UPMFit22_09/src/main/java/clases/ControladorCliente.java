@@ -1,5 +1,6 @@
 package clases;
 
+import java.util.List;
 
 /**
  * @author The Administrator
@@ -7,6 +8,8 @@ package clases;
  * @created 28-abr.-2023 0:12:14
  */
 public class ControladorCliente {
+	
+	private List<Cliente> clientes;
 
 	public ViiewCliente m_ViiewCliente;
 	public Cliente m_Cliente;
@@ -25,4 +28,22 @@ public class ControladorCliente {
 	public String listaClientes(){
 		return "";
 	}
+	
+	//metodos de la relacion con cliente
+	
+		public void setCliente(List<Cliente> clientes) {
+				
+			}
+		
+		public List<Cliente> getCliente(){
+				return null;
+			}
+			
+		public void addCliente(Cliente cliente) {
+			
+			}
+			
+		public void removeCliente (Cliente cliente) {
+				
+			}
 }//end ControladorCliente

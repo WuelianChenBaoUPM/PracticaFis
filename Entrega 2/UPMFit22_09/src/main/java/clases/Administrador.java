@@ -9,7 +9,7 @@ package clases;
 public class Administrador extends UsuarioGenerico implements InterfazAdministrador {
 
 	private int numeroDeTelefono;
-
+ 
 	public Administrador(){
 
 	}

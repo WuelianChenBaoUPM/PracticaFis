@@ -1,5 +1,6 @@
 package clases;
 
+import java.util.List;
 
 /**
  * omb
@@ -9,17 +10,19 @@ package clases;
  */
 public class Curso implements InterfazCurso {
 
+	private List<InscripcionCurso> inscripciones;
+	private List<SesionCerrada> sesiones;
 	private int fechaFIn;
 	private int fechaInicio;
 	private int horario;
 	private String nombre;
-	public SesionCerrada SesionCerrada;
 	// public   ListaCursos  m_ListaCursos;
 	public ViewSesionCerrada  m_ViewSesionCerrada;
 
 	public Curso(){
 
 	}
+	
 
 	public void finalize() throws Throwable {
 
@@ -113,5 +116,40 @@ public class Curso implements InterfazCurso {
 	 */
 	public void setNombre(String nombre){
 
+	}
+	
+	//metodos de la relacion con SesionCerrada
+	
+	public void setSesiones(List<SesionCerrada> sesiones) {
+		
+	}
+	
+	public List<SesionCerrada> getSesiones(){
+		return null;
+	}
+	
+	public void addSesion(SesionCerrada sesion) {
+		
+	}
+	
+	public void removeSesion (SesionCerrada sesion) {
+		
+	}
+	//metodos de la relacion con Cliente-InscripcionCurso
+	
+	public void setInscripciones(List<InscripcionCurso> inscripciones) {
+				
+	}
+			
+	public List<InscripcionCurso> getInscripciones(){
+		return null;
+	}
+			
+	public void addInscripcionCurso(InscripcionCurso inscripcion) {
+				
+	}
+			
+	public void removeInscripcionCurso (InscripcionCurso inscripcion) {
+				
 	}
 }//end Curso

@@ -1,6 +1,6 @@
 package clases;
 
-
+import java.util.List;
 
 /**
  * @author The Administrator
@@ -9,6 +9,8 @@ package clases;
  */
 public class Monitor extends UsuarioNoAdmin implements InterfazMonitor {
 
+	private List<SesionCerrada> sesiones;
+	
 	private int numeroDeCuenta;
 
 	public Monitor(){
@@ -54,4 +56,23 @@ public class Monitor extends UsuarioNoAdmin implements InterfazMonitor {
 	public void setNumeroCuenta(String numCuenta){
 
 	}
+	
+	//metodos de la relacion con SesionCerrada
+	
+	public void setSesiones(List<SesionCerrada> sesiones) {
+		
+	}
+	
+	public List<SesionCerrada> getSesiones(){
+		return null;
+	}
+	
+	public void addSesion(SesionCerrada sesion) {
+		
+	}
+	
+	public void removeSesion (SesionCerrada sesion) {
+		
+	}
+	
 }//end Monitor

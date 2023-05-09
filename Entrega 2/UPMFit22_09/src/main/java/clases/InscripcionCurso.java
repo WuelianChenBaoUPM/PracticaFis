@@ -1,5 +1,6 @@
 package clases;
 
+import java.util.List;
 
 /**
  * @author The Administrator
@@ -8,6 +9,8 @@ package clases;
  */
 public class InscripcionCurso {
 
+	private Cliente cliente;
+	private Curso curso;
 	private int fechaInscripcion;
 	public Cliente Clientes;
 	public Curso Cursos;
@@ -38,4 +41,24 @@ public class InscripcionCurso {
 	public void setFechaInscripcion(){
 
 	}
+	
+	//metodos de la relacion con Curso-Cliente
+	
+	public void setCurso(Curso curso) {
+				
+	}
+			
+	public Curso getCurso(){
+		return null;
+	}
+	
+	public void setCliente(Cliente cliente) {
+		
+	}
+			
+	public Cliente getCliente(){
+		return null;
+	}
+			
+	
 }//end InscripcionCurso
