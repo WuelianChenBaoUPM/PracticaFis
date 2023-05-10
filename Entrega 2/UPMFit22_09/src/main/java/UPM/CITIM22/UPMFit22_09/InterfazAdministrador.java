@@ -9,14 +9,15 @@ package UPM.CITIM22.UPMFit22_09;
  */
 public interface InterfazAdministrador {
 
-	public void altaMonitor();
-
-	public int getTelefono();
+	public double getTelefono();
 
 	/**
 	 * 
 	 * @param numTelefono
 	 */
-	public void setNumTelefono(int numTelefono);
+	public void setNumTelefono(double numTelefono);
+
+	public Monitor altaMonitor(double numeroDeCuenta, String dni, String contrasena, String correoElectronico, String nombre,
+			String nombreUsuario);
 
 }

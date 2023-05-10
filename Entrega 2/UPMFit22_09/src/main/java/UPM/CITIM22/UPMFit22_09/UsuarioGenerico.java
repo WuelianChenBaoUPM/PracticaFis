@@ -12,11 +12,14 @@ public class UsuarioGenerico implements InterfazUsuarioGenerico {
 	private String nombre;
 	private String nombreUsuario;
 
-	public UsuarioGenerico(){
-
+	public UsuarioGenerico(String contrasena, String correoElectronico, String nombre, String nombreUsuario){
+		this.contrasena = contrasena;
+		this.correoElectronico = correoElectronico;
+		this.nombre = nombre;
+		this.nombreUsuario = nombreUsuario;
 	}
 	
-	public String gentContrasena() {
+	public String getContrasena() {
 		return this.contrasena; 
 	}
 
@@ -27,20 +30,17 @@ public class UsuarioGenerico implements InterfazUsuarioGenerico {
 
 	}
 
-	public String getContrasena(){
-		return "";
-	}
 
 	public String getCorreo(){
-		return "";
+		return this.correoElectronico;
 	}
 
 	public String getNombre(){
-		return "";
+		return this.nombre;
 	}
 
 	public String getNombreUsuario(){
-		return "";
+		return this.nombreUsuario;
 	}
 
 	public void login(){
@@ -58,28 +58,11 @@ public class UsuarioGenerico implements InterfazUsuarioGenerico {
 	 * @param nombreUsuario
 	 * @param correoElectronico
 	 */
-	public UsuarioGenerico(String contrasena, String nombre, String nombreUsuario, String correoElectronico){
 
-	}
 
-	public void setContrasena(){
 
-	}
-
-	public void setCorreo(){
-
-	}
-
-	public void setNombre(){
-
-	}
-
-	/**
-	 * 
-	 * @param nombreUsusario
-	 */
 	public void setNombreUsuario(String nombreUsusario){
-
+		this.nombreUsuario = nombreUsuario;
 	}
 
 	public void logIn(){
@@ -91,7 +74,7 @@ public class UsuarioGenerico implements InterfazUsuarioGenerico {
 	 * @param contrase�a
 	 */
 	public void setContrasena(String contrasena){
-
+		this.contrasena = contrasena;
 	}
 
 	/**
@@ -99,7 +82,7 @@ public class UsuarioGenerico implements InterfazUsuarioGenerico {
 	 * @param correo
 	 */
 	public void setCorreo(String correo){
-
+		this.correoElectronico = correo;
 	}
 
 	/**
@@ -107,7 +90,7 @@ public class UsuarioGenerico implements InterfazUsuarioGenerico {
 	 * @param nombre
 	 */
 	public void setNombre(String nombre){
-
+		this.nombre = nombre;
 	}
 
 }

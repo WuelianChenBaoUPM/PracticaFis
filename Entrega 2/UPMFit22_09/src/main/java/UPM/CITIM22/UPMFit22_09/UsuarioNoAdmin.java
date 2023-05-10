@@ -9,8 +9,10 @@ public class UsuarioNoAdmin extends UsuarioGenerico {
 
 	private String dni;
 
-	public UsuarioNoAdmin(){
-
+	public UsuarioNoAdmin(String dni, String contrasena, String correoElectronico, String nombre, String nombreUsuario){
+		
+		super(contrasena, correoElectronico, nombre, nombreUsuario);
+		this.dni = dni;
 	}
 
 	public void finalize() throws Throwable {
@@ -21,7 +23,7 @@ public class UsuarioNoAdmin extends UsuarioGenerico {
 	}
 
 	public String getdni(){
-		return "";
+		return this.dni;
 	}
 
 	/**
@@ -38,18 +40,7 @@ public class UsuarioNoAdmin extends UsuarioGenerico {
 	 * @param dni
 	 */
 	public void setdni(String dni){
-
+		this.dni = dni;
 	}
 
-	public String getDNI(){
-		return "";
-	}
-
-	/**
-	 * 
-	 * @param DNI
-	 */
-	public void setDNI(String DNI){
-
-	}
 }//end UsuarioNoAdmin

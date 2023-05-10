@@ -7,24 +7,26 @@ package UPM.CITIM22.UPMFit22_09;
  */
 public class Administrador extends UsuarioGenerico implements InterfazAdministrador  {
 
-	private int numeroDeTelefono;
- 
-	public Administrador(){
+	private double numeroDeTelefono;	
+	
+	public Administrador(int numeroTelf, String contrasena, String correoElectronico, String nombre, String nombreUsuario){
 
-	}
+	} 
+
+	/**
+	 * 
+	 * @param numeroTelefono
+	 */
 
 	public void finalize() throws Throwable {
 		super.finalize();
 	}
-	public void altaMonitor(){
-
-	}
-
+	
 	public void destroy(){
 
 	}
 
-	public int getTelefono(){
+	public double getTelefono(){
 		return this.numeroDeTelefono;
 	}
 
@@ -36,20 +38,19 @@ public class Administrador extends UsuarioGenerico implements InterfazAdministra
 	 * @param nombre
 	 * @param nombreUsuario
 	 */
-	public Administrador(int numeroTelf, String contrasena, String correoElectronico, String nombre, String nombreUsuario){
 
-	} 
-
-	/**
-	 * 
-	 * @param numeroTelefono
-	 */
 	 
 
 	@Override
-	public void setNumTelefono(int numTelefono) {
+	public void setNumTelefono(double numTelefono) {
 		// TODO Auto-generated method stub
-		
+		this.numeroDeTelefono = numTelefono;
+	}
+
+	@Override
+	public Monitor altaMonitor(double numeroDeCuenta, String dni, String contrasena, String correoElectronico, String nombre, String nombreUsuario) {
+		// TODO Auto-generated method stub
+		return new Monitor(numeroDeCuenta, dni, contrasena, correoElectronico, nombre, nombreUsuario);
 	}
 
 	/**

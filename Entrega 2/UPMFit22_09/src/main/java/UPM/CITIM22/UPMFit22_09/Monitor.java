@@ -11,11 +11,18 @@ public class Monitor extends UsuarioNoAdmin implements InterfazMonitor {
 
 	private List<SesionCerrada> sesiones;
 	
-	private int numeroDeCuenta;
+	private double numeroDeCuenta;
 
-	public Monitor(){
-
+	public Monitor(double numeroDeCuenta, String dni, String contrasena, String correoElectronico, String nombre, String nombreUsuario){
+		
+			super(dni, contrasena, correoElectronico, nombre, nombreUsuario);
+			this.numeroDeCuenta = numeroDeCuenta;
 	}
+
+	/**
+	 * 
+	 * @param numeroCuenta
+	 */
 
 	public void finalize() throws Throwable {
 		super.finalize();
@@ -37,14 +44,7 @@ public class Monitor extends UsuarioNoAdmin implements InterfazMonitor {
 	 * @param nombre
 	 * @param nombreUsuario
 	 */
-	public Monitor(int numeroDeCuenta, String dni, String contrasena, String correoElectronico, String nombre, String nombreUsuario){
-
-	}
-
-	/**
-	 * 
-	 * @param numeroCuenta
-	 */
+	
 	public void setNumeroCuenta(int numeroCuenta){
 
 	}
