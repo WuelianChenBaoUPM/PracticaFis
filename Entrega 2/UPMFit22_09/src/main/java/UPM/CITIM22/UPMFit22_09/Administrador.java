@@ -9,8 +9,9 @@ public class Administrador extends UsuarioGenerico implements InterfazAdministra
 
 	private double numeroDeTelefono;	
 	
-	public Administrador(int numeroTelf, String contrasena, String correoElectronico, String nombre, String nombreUsuario){
-
+	public Administrador(double numeroTelf, String contrasena, String correoElectronico, String nombre, String nombreUsuario){
+		super (contrasena,correoElectronico,nombre,nombreUsuario);
+		this.numeroDeTelefono = numeroTelf;
 	} 
 
 	/**

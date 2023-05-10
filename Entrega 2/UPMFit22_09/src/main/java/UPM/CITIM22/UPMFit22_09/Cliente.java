@@ -16,9 +16,7 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	private String sexo;
 	private int tarjetaCredito;
 
-	public Cliente(){
 
-	}
 
 	public void finalize() throws Throwable {
 		super.finalize();
@@ -56,7 +54,9 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	 * @param nombreUsuario
 	 */
 	public Cliente(int edad, String sexo, double peso, int tarjeta, String dni, String contrasena, String correo, String nombre, String nombreUsuario){
-
+		super (dni,contrasena , correo, nombre,nombreUsuario);
+		this.edad = edad;
+		this.sexo = sexo;
 	}
 
 	/**
