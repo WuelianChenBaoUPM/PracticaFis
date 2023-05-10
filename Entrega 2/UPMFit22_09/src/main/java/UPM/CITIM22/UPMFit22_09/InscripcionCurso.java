@@ -12,8 +12,8 @@ public class InscripcionCurso {
 	private Cliente cliente;
 	private Curso curso;
 	private int fechaInscripcion;
-	public Cliente Clientes;
-	public Curso Cursos;
+	private  Cliente Clientes;
+	private  Curso Cursos;
 
 	public InscripcionCurso(){
 
