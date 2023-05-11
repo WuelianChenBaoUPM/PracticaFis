@@ -7,7 +7,7 @@ package UPM.CITIM22.UPMFit22_09;
  * @version 1.0
  * @created 28-abr.-2023 0:12:09
  */
-public interface InterfazCliente {
+public interface InterfazCliente extends InterfazUsNoAdmin{
 
 	public int getEdad();
 
@@ -39,6 +39,6 @@ public interface InterfazCliente {
 	 * 
 	 * @param tarjeta
 	 */
-	public void setTarjeta(String tarjeta);
+	public void setTarjeta(int tarjeta);
 
 }

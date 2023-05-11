@@ -5,9 +5,10 @@ package UPM.CITIM22.UPMFit22_09;
  * @version 1.0
  * @created 28-abr.-2023 0:11:48
  */
-public class UsuarioNoAdmin extends UsuarioGenerico {
+public class UsuarioNoAdmin extends UsuarioGenerico implements InterfazUsNoAdmin {
 
 	private String dni;
+	public UsuarioNoAdmin() {}
 
 	public UsuarioNoAdmin(String dni, String contrasena, String correoElectronico, String nombre, String nombreUsuario){
 		
@@ -22,7 +23,7 @@ public class UsuarioNoAdmin extends UsuarioGenerico {
 
 	}
 
-	public String getdni(){
+	public String getDni(){
 		return this.dni;
 	}
 
@@ -39,7 +40,7 @@ public class UsuarioNoAdmin extends UsuarioGenerico {
 	 * 
 	 * @param dni
 	 */
-	public void setdni(String dni){
+	public void setDni(String dni){
 		this.dni = dni;
 	}
 

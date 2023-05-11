@@ -1,6 +1,9 @@
 package UPM.CITIM22.UPMFit22_09;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import servidor.Autenticacion;
 
 /**
  * @author The Administrator
@@ -11,18 +14,33 @@ public class ControladorCliente {
 	
 	private List<Cliente> clientes;
 
-	public ViiewCliente m_ViiewCliente;
-	public Cliente m_Cliente;
-
+	private ViiewCliente ViewCliente;
+	private Autenticacion autentica;
+	
+	
 	public ControladorCliente(){
-
+		clientes = new ArrayList<>();
+		ViewCliente = new ViiewCliente();
+		autentica = new Autenticacion();
 	}
 
 	public void finalize() throws Throwable {
 
 	}
 	public Cliente crearCliente(){
-		return null;
+		return new Cliente();
+	}
+	
+	public void altaCliente() {
+		Cliente c = this.crearCliente();
+		 ViewCliente.altaCliente(c);
+		 if(autentica.existeCuentaUPM(c.getCorreo()))
+		 {
+			 System.out.println("este us pertenece a la UPM");
+		 } 
+		this.addCliente(c);
+		
+		
 	}
 
 	public String listaClientes(){
@@ -40,7 +58,7 @@ public class ControladorCliente {
 			}
 			
 		public void addCliente(Cliente cliente) {
-			
+			clientes.add(cliente);
 			}
 			
 		public void removeCliente (Cliente cliente) {

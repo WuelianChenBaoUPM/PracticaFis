@@ -2,6 +2,9 @@ package UPM.CITIM22.UPMFit22_09;
 
 import java.util.List;
 
+import servidor.Autenticacion;
+import servidor.UPMUsers;
+
 /**
  * @author The Administrator
  * @version 1.0
@@ -15,7 +18,9 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	private float peso;
 	private String sexo;
 	private int tarjetaCredito;
-
+	private UPMUsers rol ;
+	
+	public Cliente() {}
 
 
 	public void finalize() throws Throwable {
@@ -103,9 +108,7 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	 * 
 	 * @param tarjeta
 	 */
-	public void setTarjeta(String tarjeta){
-
-	}
+	
 	
 	//metodos de la relacion con Curso-InscripcionCurso
 	

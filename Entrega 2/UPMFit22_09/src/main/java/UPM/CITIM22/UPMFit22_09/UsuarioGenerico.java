@@ -12,6 +12,7 @@ public class UsuarioGenerico implements InterfazUsuarioGenerico {
 	private String nombre;
 	private String nombreUsuario;
 
+	public UsuarioGenerico() {}
 	public UsuarioGenerico(String contrasena, String correoElectronico, String nombre, String nombreUsuario){
 		this.contrasena = contrasena;
 		this.correoElectronico = correoElectronico;

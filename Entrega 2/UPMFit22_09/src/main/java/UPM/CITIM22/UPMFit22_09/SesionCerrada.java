@@ -28,12 +28,12 @@ public class SesionCerrada extends Sesion implements InterfazSesion {
 		return 0;
 	}
 
-	public int getHoraFin(){
-		return 0;
+	public String getHoraFin(){
+		return "";
 	}
 
-	public int getHoraInicio(){
-		return 0;
+	public String getHoraInicio(){
+		return "";
 	}
 
 	/**
