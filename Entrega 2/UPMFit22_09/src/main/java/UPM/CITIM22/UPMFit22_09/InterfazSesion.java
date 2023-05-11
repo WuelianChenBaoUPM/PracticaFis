@@ -11,15 +11,15 @@ public interface InterfazSesion {
 
 	public int getAforo();
 
-	public int getHoraFin();
+	public String getHoraFin();
 
-	public int getHoraInicio();
+	public String getHoraInicio();
 
 	/**
 	 * 
 	 * @param actividad
 	 */
-	public void setActividad(String actividad);
+	public void setActividad(TActividad actividad);
 
 	/**
 	 * 
@@ -31,7 +31,7 @@ public interface InterfazSesion {
 	 * 
 	 * @param hora
 	 */
-	public void setHorafFin(String hora);
+	public void setHoraFin(String hora);
 
 	/**
 	 * 
@@ -39,12 +39,5 @@ public interface InterfazSesion {
 	 */
 	public void setHoraInicio(String hora);
 
-	public void setActividad();
-
-	public void setAforo();
-
-	public void setHoraFin();
-
-	public void setHoraInicio();
 
 }

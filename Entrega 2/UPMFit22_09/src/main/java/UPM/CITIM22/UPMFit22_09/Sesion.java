@@ -9,8 +9,8 @@ public class Sesion implements InterfazSesion {
 
 	private TActividad actividad;
 	private int aforo;
-	private int horaFin;
-	private int horaInicio;
+	private String horaFin;
+	private String horaInicio;
 
 	public Sesion(){
 
@@ -24,19 +24,19 @@ public class Sesion implements InterfazSesion {
 	}
 
 	public TActividad getActividad(){
-		return null;
+		return this.actividad;
 	}
 
 	public int getAforo(){
-		return 0;
+		return this.aforo;
 	}
 
-	public int getHoraFin(){
-		return 0;
+	public String getHoraFin(){
+		return this.horaFin;
 	}
 
-	public int getHoraInicio(){
-		return 0;
+	public String getHoraInicio(){
+		return this.horaInicio;
 	}
 
 	/**
@@ -46,55 +46,33 @@ public class Sesion implements InterfazSesion {
 	 * @param horaFin
 	 * @param horaInicio
 	 */
-	public Sesion(int actividad, int aforo, int horaFin, int horaInicio){
-
+	public Sesion(TActividad actividad, int aforo, String horaFin, String horaInicio){
+		this.actividad = actividad;
+		this.aforo = aforo;
+		this.horaFin = horaFin;
+		this.horaInicio = horaInicio;
 	}
 
-	public void setActividad(){
+	
 
+	@Override
+	public void setActividad(TActividad actividad){
+		this.actividad = actividad;
 	}
 
-	public void setAforo(){
-
-	}
-
-	public void setHoraFin(){
-
-	}
-
-	public void setHoraInicio(){
-
-	}
-
-	/**
-	 * 
-	 * @param actividad
-	 */
-	public void setActividad(String actividad){
-
-	}
-
-	/**
-	 * 
-	 * @param aforo
-	 */
+	@Override
 	public void setAforo(int aforo){
-
+		this.aforo = aforo;
 	}
 
-	/**
-	 * 
-	 * @param hora
-	 */
-	public void setHorafFin(String hora){
-
+	@Override
+	public void setHoraFin(String horaFin){
+		this.horaFin = horaFin;
+	}
+	@Override
+	public void setHoraInicio(String horaInicio){
+		this.horaInicio = horaInicio;
 	}
 
-	/**
-	 * 
-	 * @param hora
-	 */
-	public void setHoraInicio(String hora){
-
-	}
+	
 }//end Sesion

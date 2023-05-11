@@ -31,18 +31,18 @@ public class ControladorCurso {
 	//metodos relacion con curso
 	
 	public void setCurso(List<Curso> cursos)  {
-		
+		this.cursos = cursos;
 	}
 	
 	public List<Curso> getCurso(){
-		return null;
+		return this.cursos;
 	}
 	
 	public void addCurso(Curso curso) {
-		
+		this.cursos.add(curso);
 	}
 	
 	public void removeCurso (Curso curso) {
-		
+		this.cursos.remove(curso);
 	}
 }//end ControladorCurso

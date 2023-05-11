@@ -32,18 +32,18 @@ public class ControladorMonitor {
 	//metodos relacion con Monitor
 	
 		public void setMonitor(List<Monitor> monitores)  {
-				
+				this.monitores = monitores;
 			}
 			
 		public List<Monitor> getMonitor(){
-				return null;
+				return this.monitores;
 			}
 			
 		public void addMonitor(Monitor monitor) {
-		
+				this.monitores.add(monitor);
 			}
 			
 		public void removeMonitor (Monitor monitor) {
-				
+				this.monitores.remove(monitor);
 			}
 }//end ControladorMonitor

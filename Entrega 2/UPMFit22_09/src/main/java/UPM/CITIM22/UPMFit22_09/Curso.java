@@ -121,19 +121,19 @@ public class Curso implements InterfazCurso {
 	//metodos de la relacion con SesionCerrada
 	
 	public void setSesiones(List<SesionCerrada> sesiones) {
-		
+		this.sesiones = sesiones;
 	}
 	
 	public List<SesionCerrada> getSesiones(){
-		return null;
+		return this.sesiones;
 	}
 	
 	public void addSesion(SesionCerrada sesion) {
-		
+		this.sesiones.add(sesion);
 	}
 	
 	public void removeSesion (SesionCerrada sesion) {
-		
+		this.sesiones.remove(sesion);
 	}
 	//metodos de la relacion con Cliente-InscripcionCurso
 	
