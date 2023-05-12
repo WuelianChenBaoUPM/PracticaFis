@@ -39,7 +39,11 @@ public class ControladorCliente {
 			 System.out.println("este us pertenece a la UPM");
 		 } 
 		this.addCliente(c);
-		
+			
+	}
+	
+	public void verListaClientes() {
+		ViewCliente.renderListaCliente(this.clientes);
 		
 	}
 

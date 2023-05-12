@@ -11,7 +11,7 @@ public interface InterfazCliente extends InterfazUsNoAdmin{
 
 	public int getEdad();
 
-	public float getPeso();
+	public int getPeso();
 
 	public String getSexo();
 
@@ -27,7 +27,7 @@ public interface InterfazCliente extends InterfazUsNoAdmin{
 	 * 
 	 * @param peso
 	 */
-	public void setPeso(float peso);
+	public void setPeso(int peso);
 
 	/**
 	 * 

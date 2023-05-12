@@ -15,7 +15,7 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	
 	private List<InscripcionCurso> inscripciones;
 	private int edad;
-	private float peso;
+	private int peso;
 	private String sexo;
 	private int tarjetaCredito;
 	private UPMUsers rol ;
@@ -31,19 +31,19 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	}
 
 	public int getEdad(){
-		return 0;
+		return this.edad;
 	}
 
-	public float getPeso(){
-		return 0;
+	public int getPeso(){
+		return this.peso;
 	}
 
 	public String getSexo(){
-		return "";
+		return this.sexo;
 	}
 
 	public int getTarjeta(){
-		return 0;
+		return this.tarjetaCredito;
 	}
  
 	/**
@@ -69,15 +69,15 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	 * @param edad
 	 */
 	public void setEdad(int edad){
-
+		this.edad = edad;
 	}
 
 	/**
 	 * 
 	 * @param peso
 	 */
-	public void setPeso(double peso){
-
+	public void setPeso(int peso){
+		this.peso= peso;
 	}
 
 	/**
@@ -85,7 +85,7 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	 * @param sexo
 	 */
 	public void setSexo(String sexo){
-
+		this.sexo = sexo;
 	}
 
 	/**
@@ -93,16 +93,14 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	 * @param tarjeta
 	 */
 	public void setTarjeta(int tarjeta){
-
+		this.tarjetaCredito = tarjeta;
 	}
 
 	/**
 	 * 
 	 * @param peso
 	 */
-	public void setPeso(float peso){
 
-	}
 
 	/**
 	 * 

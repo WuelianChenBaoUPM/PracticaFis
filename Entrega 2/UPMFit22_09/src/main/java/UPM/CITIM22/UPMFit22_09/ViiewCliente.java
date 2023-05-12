@@ -1,5 +1,6 @@
 package UPM.CITIM22.UPMFit22_09;
 
+import java.util.List;
 import java.util.Scanner;
 
 import servidor.Autenticacion;
@@ -24,12 +25,18 @@ public class ViiewCliente {
 	}
 	
 
-	public void renderCliente(){
-
+	public void renderCliente(InterfazCliente c){
+		
+		System.out.println("nombre : "+c.getNombre()+"\nnombre de usuario : " + c.getNombreUsuario() +"\ncorreo : " + c.getCorreo() + 
+				"\ndni : "+c.getDni()+"\nedad :"+ c.getEdad() + "\npeso : "+c.getPeso() + "\nsexo : "+c.getSexo());
+	
 	}
 
-	public void renderListaCliente(){
-
+	public void renderListaCliente(List<Cliente> clientes ){
+		for (Cliente c :clientes) {
+			renderCliente(c);	
+		}
+		
 	}
 	public void altaCliente(InterfazCliente cl){
 		
@@ -52,11 +59,11 @@ public class ViiewCliente {
 		int edad = sc.nextInt();
 		cl.setEdad(edad);
 		System.out.println("peso:");
-		float peso = sc.nextFloat();
+		int peso = sc.nextInt();
 		cl.setPeso(peso);
-		System.out.println("sexo:");
+		System.out.println("sexo (H/M):");
 		String sexo = sc.nextLine();
-		cl.setSexo(sexo);
+		cl.setSexo(sexo );
 		System.out.println("tarjeta de credito:");
 		int tarjeta = sc.nextInt();
 		cl.setTarjeta(tarjeta);

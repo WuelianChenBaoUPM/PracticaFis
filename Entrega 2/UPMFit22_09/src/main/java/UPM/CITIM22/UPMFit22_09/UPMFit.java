@@ -9,7 +9,7 @@ public class UPMFit {
 
 
 	public ControladorAdmin m_ControladorAdmin;
-	public ControladorCliente m_ControladorCliente;
+	public static ControladorCliente controllerCliente= new ControladorCliente();
 	public ControladorMonitor m_ControladorMonitor;
 	public viewCurso m_viewCurso;
 	public Curso m_Curso;
@@ -32,4 +32,23 @@ public class UPMFit {
 	public String operate(){
 		return "";
 	}
+	
+	
+	
+	
+	
+	 public static void main( String[] args ){
+		 
+		 controllerCliente.altaCliente();
+		 System.out.println("Lista de clientes");
+		 controllerCliente.verListaClientes();
+		 
+		 
+	    
+	 }
+	 
+	 
+	 
+	 
+	    
 }//end UPMFit
