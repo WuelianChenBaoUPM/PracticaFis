@@ -18,7 +18,7 @@ public class viewCurso {
 	 
 
 	public void renderCurso(){
-
+		
 	}
 
 	public void renderListaCursos(){

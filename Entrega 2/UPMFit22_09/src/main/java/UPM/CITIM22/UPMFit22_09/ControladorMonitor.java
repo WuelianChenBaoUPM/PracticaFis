@@ -21,8 +21,12 @@ public class ControladorMonitor {
 	public void finalize() throws Throwable {
 
 	}
-	public Monitor crearMonitor(){
-		return null;
+	public Monitor crearMonitor(double numeroDeCuenta, String dni, String contrasena, String correoElectronico, 
+			String nombre, String nombreUsuario){
+		
+		Monitor monitor = new Monitor(numeroDeCuenta, dni, contrasena, correoElectronico, nombre, nombreUsuario);
+		
+		return monitor;
 	}
 
 	public String listaMonitores(){

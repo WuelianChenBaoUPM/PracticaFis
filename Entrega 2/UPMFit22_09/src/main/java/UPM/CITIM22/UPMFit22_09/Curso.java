@@ -12,9 +12,9 @@ public class Curso implements InterfazCurso {
 
 	private List<InscripcionCurso> inscripciones;
 	private List<SesionCerrada> sesiones;
-	private int fechaFIn;
-	private int fechaInicio;
-	private int horario;
+	private String fechaFIn;
+	private String fechaInicio;
+	private String horario;
 	private String nombre;
 	// public   ListaCursos  m_ListaCursos;
 	public ViewSesionCerrada  m_ViewSesionCerrada;
@@ -27,8 +27,11 @@ public class Curso implements InterfazCurso {
 	public void finalize() throws Throwable {
 
 	}
-	public SesionCerrada crearSesionCerrada(){
-		return null;
+	public SesionCerrada crearSesionCerrada(Monitor monitor, TActividad actividad, int aforo, String horaFin, String horaInicio){
+		
+		SesionCerrada sesion = new SesionCerrada(monitor, actividad, aforo, horaFin, horaInicio);
+		
+		return sesion;
 	}
 
 	public void destroy(){
@@ -62,8 +65,13 @@ public class Curso implements InterfazCurso {
 	 * @param horario
 	 * @param nombre
 	 */
-	public Curso(int fechaInicio, int fechaFin, int horario, String nombre){
-
+	public Curso(SesionCerrada sesion1, SesionCerrada sesion2, String fechaInicio, String fechaFin, String horario, String nombre){
+		this.sesiones.add(sesion1);
+		this.sesiones.add(sesion2);
+		this.fechaInicio = fechaInicio;
+		this.fechaFIn = fechaFin;
+		this.horario = horario;
+		this.nombre = nombre;
 	}
 
 	public void setFechaFin(){

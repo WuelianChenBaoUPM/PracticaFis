@@ -28,6 +28,10 @@ public class ControladorCurso {
 		return "";
 	}
 	
+	public void altaCurso(SesionCerrada sesion1, SesionCerrada sesion2, String fechaInicio, String fechaFin, String horario, String nombre) {
+		Curso curso = new Curso(sesion1, sesion2, fechaInicio, fechaFin, horario, nombre);
+	}
+	
 	//metodos relacion con curso
 	
 	public void setCurso(List<Curso> cursos)  {

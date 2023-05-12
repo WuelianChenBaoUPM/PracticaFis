@@ -8,11 +8,11 @@ package UPM.CITIM22.UPMFit22_09;
 public class UPMFit {
 
 
-	public ControladorAdmin m_ControladorAdmin;
+	public ControladorAdmin controllerAdmin;
 	public static ControladorCliente controllerCliente= new ControladorCliente();
-	public ControladorMonitor m_ControladorMonitor;
-	public viewCurso m_viewCurso;
-	public Curso m_Curso;
+	public ControladorMonitor controllerMonitor;
+	public viewCurso viewCurso;
+	public ControladorCurso controllerCurso;
 
 	public UPMFit(){
 
@@ -33,7 +33,14 @@ public class UPMFit {
 		return "";
 	}
 	
+	public void cursoInicio(String datos) {
+		tratadoDatos(datos);
+		
+	}
 	
+	private void tratadoDatos(String datos) {
+		
+	}
 	
 	
 	
