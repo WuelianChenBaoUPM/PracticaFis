@@ -17,3 +17,5 @@ En el diagrama esta mal la relacion de Monitor con su Controlador , falta la agr
 Hay que cambiar el tipo de datos de horaFin y horaInicio de la clase Sesion a tipo String.
 
 Añadir InterfazUsNoDni , heredar todas las interfaces entre si y añadir los metodos nuevos
+
+Falta el GUI para la vista del Sistema
