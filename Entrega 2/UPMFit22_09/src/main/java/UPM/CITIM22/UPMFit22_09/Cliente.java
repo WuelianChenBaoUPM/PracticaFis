@@ -19,6 +19,7 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	private String sexo;
 	private int tarjetaCredito;
 	private UPMUsers rol ;
+	private int id;
 	
 	public Cliente() {}
 
@@ -109,8 +110,17 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	 * @param tarjeta
 	 */
 	
-	
+	public void setId (int id) {
+		this.id = id;
+	}
+	public int getId () {return this.id;}
 	//metodos de la relacion con Curso-InscripcionCurso
+	
+	public void inscribirseACurso (Curso c) {
+		
+		InscripcionCurso inscripcion = new InscripcionCurso (this,c );
+		addInscripcionCurso(inscripcion);
+	}
 	
 	public void setInscripciones(List<InscripcionCurso> inscripciones)  {
 			
@@ -121,7 +131,7 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	}
 		
 	public void addInscripcionCurso(InscripcionCurso inscripcion) {
-			
+			this.inscripciones.add(inscripcion);
 	}
 		
 	public void removeInscripcionCurso (InscripcionCurso inscripcion) {

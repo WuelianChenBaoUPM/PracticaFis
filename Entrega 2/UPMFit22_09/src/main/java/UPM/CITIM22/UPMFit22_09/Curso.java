@@ -16,6 +16,7 @@ public class Curso implements InterfazCurso {
 	private String fechaInicio;
 	private String horario;
 	private String nombre;
+	private int id ;
 	// public   ListaCursos  m_ListaCursos;
 	public ViewSesionCerrada  m_ViewSesionCerrada;
 
@@ -73,6 +74,10 @@ public class Curso implements InterfazCurso {
 		this.horario = horario;
 		this.nombre = nombre;
 	}
+	public void setId (int id) {
+		this.id = id;
+	}
+	public int getId () {return this.id;}
 
 	public void setFechaFin(){
 

@@ -12,9 +12,7 @@ public class InscripcionCurso {
 	private Cliente cliente;
 	private Curso curso;
 	private int fechaInscripcion;
-	private  Cliente Clientes;
-	private  Curso Cursos;
-
+	
 	public InscripcionCurso(){
 
 	}
@@ -35,9 +33,16 @@ public class InscripcionCurso {
 	 * @param fechaInscripcion
 	 */
 	public InscripcionCurso(int fechaInscripcion){
-
+		this.fechaInscripcion = fechaInscripcion;
 	}
 
+	public InscripcionCurso(Cliente client , Curso curso){
+		this.cliente = client;
+		this.curso = curso;
+		
+	}
+	
+	
 	public void setFechaInscripcion(){
 
 	}

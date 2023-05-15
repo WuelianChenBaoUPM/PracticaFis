@@ -31,6 +31,15 @@ public class ControladorCurso {
 	public void altaCurso(SesionCerrada sesion1, SesionCerrada sesion2, String fechaInicio, String fechaFin, String horario, String nombre) {
 		Curso curso = new Curso(sesion1, sesion2, fechaInicio, fechaFin, horario, nombre);
 	}
+	public Curso obtenerCursoPorId(int id) {
+		Curso curso = new Curso();
+		for (Curso c : cursos) {
+			if (c.getId() == id )	
+				curso = c;
+			}
+		
+		return curso;
+	}
 	
 	//metodos relacion con curso
 	
