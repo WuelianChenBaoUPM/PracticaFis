@@ -58,10 +58,12 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	 * @param nombre
 	 * @param nombreUsuario
 	 */
-	public Cliente(int edad, String sexo, double peso, int tarjeta, String dni, String contrasena, String correo, String nombre, String nombreUsuario){
+	public Cliente(int edad, String sexo, int peso, int tarjeta, String dni, String contrasena, String correo, String nombre, String nombreUsuario){
 		super (dni,contrasena , correo, nombre,nombreUsuario);
 		this.edad = edad;
 		this.sexo = sexo;
+		this.peso = peso;
+		this.tarjetaCredito = tarjeta;
 	}
 
 	/**

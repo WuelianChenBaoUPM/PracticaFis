@@ -20,7 +20,9 @@ public class SesionCerrada extends Sesion implements InterfazSesion {
 
 	}
 	
-	public Monitor getMonitor
+	public Monitor getMonitor() {
+		return monitor;
+	}
 
 	public TActividad getActividad(){
 		return super.getActividad();

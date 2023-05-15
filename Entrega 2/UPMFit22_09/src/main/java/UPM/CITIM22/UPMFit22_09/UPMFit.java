@@ -45,13 +45,10 @@ public class UPMFit {
 	
 	
 	 public static void main( String[] args ){
+		 //int edad, String sexo, double peso, int tarjeta, String dni, String contrasena, String correo, String nombre, String nombreUsuario
 		 
-		 controllerCliente.altaCliente();
-		 System.out.println("Lista de clientes");
-		 controllerCliente.verListaClientes();
+		 controllerCliente.altaCliente("20,hombre,80,258258123,x1564564,asdqwe,pepe.fernandez@alumnos.upm.es,Pepe,PepeFit");
 		 
-		 
-	    
 	 }
 	 
 	 

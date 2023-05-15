@@ -31,15 +31,18 @@ public class ControladorCliente {
 		return new Cliente();
 	}
 	
-	public void altaCliente() {
-		Cliente c = this.crearCliente();
-		 ViewCliente.altaCliente(c);
-		 if(autentica.existeCuentaUPM(c.getCorreo()))
-		 {
-			 System.out.println("este us pertenece a la UPM");
-		 } 
+	public void separarDatos() {}
+	
+	
+	
+	public void altaCliente(String datos) {
+		String info[] = datos.split(",");
+		//int edad, String sexo, double peso, int tarjeta, String dni, String contrasena, String correo, String nombre, String nombreUsuario
+		Cliente c = new Cliente (Integer.parseInt(info[0]),info[1],Integer.parseInt(info[2]),Integer.parseInt(info[3]),info[4],info[5],info[6],info[7],info[8]);
 		this.addCliente(c);
-			
+		ViewCliente.altaClienteOk();
+		ViewCliente.renderListaCliente(clientes);
+		
 	}
 	
 	public void verListaClientes() {
