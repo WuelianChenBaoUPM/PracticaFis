@@ -43,6 +43,12 @@ public class ViiewCliente {
 	
 	
 	}
+
+
+	public String formAltaCliente() {
+		return "20,hombre,80,258258123,x1564564,asdqwe,pepe.fernandez@alumnos.upm.es,Pepe,PepeFit";
+		
+	}
 	
 
 	

@@ -13,7 +13,6 @@ import servidor.Autenticacion;
 public class ControladorCliente {
 	
 	private List<Cliente> clientes;
-	private int numClientes;
 	private ViiewCliente ViewCliente;
 	private Autenticacion autentica;
 	private ControladorCurso controllerCurso;
@@ -23,7 +22,6 @@ public class ControladorCliente {
 		clientes = new ArrayList<>();
 		ViewCliente = new ViiewCliente();
 		autentica = new Autenticacion();
-		numClientes =0 ;
 	}
 
 	public void finalize() throws Throwable {
@@ -37,18 +35,37 @@ public class ControladorCliente {
 	
 	
 	
-	public void altaCliente(String datos) {
+	public void altaCliente() {
+		
+		
+		String datos=ViewCliente.formAltaCliente();
+		
+		
 		String info[] = datos.split(",");
+		validacion(info);
+
+		
 		//int edad, String sexo, double peso, int tarjeta, String dni, String contrasena, String correo, String nombre, String nombreUsuario
-		Cliente c = new Cliente (Integer.parseInt(info[0]),info[1],Integer.parseInt(info[2]),Integer.parseInt(info[3]),info[4],info[5],info[6],info[7],info[8]);
-		c.setId(numClientes);
-		this.addCliente(c);
-		numClientes++; 
+		Cliente c = creaCliente(info);
+		
+		clientes.add(c);
+		c.setId(clientes.size());
+		
 		ViewCliente.altaClienteOk();
 		ViewCliente.renderListaCliente(clientes);
 		
 	}
 	
+	private Cliente creaCliente(String[] info) {
+
+		return 	new Cliente (Integer.parseInt(info[0]),info[1],Integer.parseInt(info[2]),Integer.parseInt(info[3]),info[4],info[5],info[6],info[7],info[8]);
+	}
+
+	private void validacion(String[] info) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	public void inscribirseACurso(int idCliente,int idCurso){
 		Cliente cliente = this.obtenerClientePorId(idCliente);
 		Curso curso =controllerCurso.obtenerCursoPorId(idCurso);
@@ -85,12 +102,9 @@ public class ControladorCliente {
 			}
 		
 		public List<Cliente> getCliente(){
-				return null;
+				return clientes;
 			}
 			
-		public void addCliente(Cliente cliente) {
-			clientes.add(cliente);
-			}
 			
 		public void removeCliente (Cliente cliente) {
 				

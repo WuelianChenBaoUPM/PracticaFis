@@ -9,7 +9,7 @@ public class UPMFit {
 
 
 	public ControladorAdmin controllerAdmin;
-	public static ControladorCliente controllerCliente= new ControladorCliente();
+	public ControladorCliente controllerCliente= new ControladorCliente();
 	public ControladorMonitor controllerMonitor;
 	public viewCurso viewCurso;
 	public ControladorCurso controllerCurso;
@@ -22,6 +22,23 @@ public class UPMFit {
 
 	}
 	private void init(){
+		
+		Cliente c = new Cliente (Integer.parseInt(info[0]),info[1],Integer.parseInt(info[2]),Integer.parseInt(info[3]),info[4],info[5],info[6],info[7],info[8]);
+		controllerCliente.getCliente().add(c);
+		
+		Cliente c2 = new Cliente (Integer.parseInt(info[0]),info[1],Integer.parseInt(info[2]),Integer.parseInt(info[3]),info[4],info[5],info[6],info[7],info[8]);
+		controllerCliente.getCliente().add(c2);
+		
+		Cliente c3 = new Cliente (Integer.parseInt(info[0]),info[1],Integer.parseInt(info[2]),Integer.parseInt(info[3]),info[4],info[5],info[6],info[7],info[8]);
+		controllerCliente.getCliente().add(c3);
+		
+		Cliente c4 = new Cliente (Integer.parseInt(info[0]),info[1],Integer.parseInt(info[2]),Integer.parseInt(info[3]),info[4],info[5],info[6],info[7],info[8]);
+		controllerCliente.getCliente().add(c4);
+		
+		Cliente c5 = new Cliente (Integer.parseInt(info[0]),info[1],Integer.parseInt(info[2]),Integer.parseInt(info[3]),info[4],info[5],info[6],info[7],info[8]);
+		controllerCliente.getCliente().add(c5);
+		
+//		 controllerCliente.altaCliente("20,hombre,80,258258123,x1564564,asdqwe,pepe.fernandez@alumnos.upm.es,Pepe,PepeFit");
 
 	}
 
@@ -45,11 +62,19 @@ public class UPMFit {
 	
 	
 	 public static void main( String[] args ){
+		 UPMFit UPMF = new UPMFit();
+		 UPMF.init();
+		 UPMF.start();
 		 //int edad, String sexo, double peso, int tarjeta, String dni, String contrasena, String correo, String nombre, String nombreUsuario
 		 
-		 controllerCliente.altaCliente("20,hombre,80,258258123,x1564564,asdqwe,pepe.fernandez@alumnos.upm.es,Pepe,PepeFit");
 		 
 	 }
+
+	private void start() {
+
+controllerCliente.altaCliente();
+		
+	}
 	 
 	 
 	 
