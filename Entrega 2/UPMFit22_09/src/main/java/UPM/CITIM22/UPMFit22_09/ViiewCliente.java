@@ -29,7 +29,10 @@ public class ViiewCliente {
 		
 		System.out.println("nombre : "+c.getNombre()+"\nnombre de usuario : " + c.getNombreUsuario() +"\ncorreo : " + c.getCorreo() + 
 				"\ndni : "+c.getDni()+"\nedad :"+ c.getEdad() + "\npeso : "+c.getPeso() + "\nsexo : "+c.getSexo());
-	
+	if(c.getRol()!= null)
+	{
+		System.out.println("rol :" +c.getRol());
+	}
 	}
 
 	public void renderListaCliente(List<Cliente> clientes ){
@@ -38,15 +41,17 @@ public class ViiewCliente {
 		}
 		
 	}
-	public void altaClienteOk(){
-		System.out.println("Cliente creado");
 	
-	
-	}
 
 
 	public String formAltaCliente() {
-		return "20,hombre,80,258258123,x1564564,asdqwe,pepe.fernandez@alumnos.upm.es,Pepe,PepeFit";
+		
+		//int edad, String sexo, double peso, int tarjeta, String dni, String contrasena, String correo, String nombre, String nombreUsuario
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Escriba los datos del nuevo cliente de la forma +"
+				+ "\n'edad,sexo,peso,tarjeta,dni,contrasena,correo,nombre,nombreUsuario'");
+		String datos = sc.nextLine();
+		return datos;
 		
 	}
 	

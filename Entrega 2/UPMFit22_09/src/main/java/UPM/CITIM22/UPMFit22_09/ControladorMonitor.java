@@ -1,5 +1,6 @@
 package UPM.CITIM22.UPMFit22_09;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,7 +16,7 @@ public class ControladorMonitor {
 	public InterfazMonitor m_InterfazMonitor;
 
 	public ControladorMonitor(){
-
+		this.monitores = new ArrayList<>();
 	}
 
 	public void finalize() throws Throwable {

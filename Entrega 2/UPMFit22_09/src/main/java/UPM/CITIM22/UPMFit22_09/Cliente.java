@@ -18,7 +18,7 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	private int peso;
 	private String sexo;
 	private int tarjetaCredito;
-	private UPMUsers rol ;
+	private UPMUsers rol = null;
 	private int id;
 	
 	public Cliente() {}
@@ -136,5 +136,15 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 		
 	public void removeInscripcionCurso (InscripcionCurso inscripcion) {
 			
+	}
+
+
+	public UPMUsers getRol() {
+		return rol;
+	}
+
+
+	public void setRol(UPMUsers rol) {
+		this.rol = rol;
 	}
 }//end Cliente

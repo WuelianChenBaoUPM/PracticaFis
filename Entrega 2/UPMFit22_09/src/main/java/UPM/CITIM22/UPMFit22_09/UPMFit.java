@@ -21,8 +21,8 @@ public class UPMFit {
 	public void finalize() throws Throwable {
 
 	}
-	private void init(){
-		
+	private void init(){ // inicializacion de todas las variables y cosas a tener previos a la ejecucion del menú
+		/*
 		Cliente c = new Cliente (Integer.parseInt(info[0]),info[1],Integer.parseInt(info[2]),Integer.parseInt(info[3]),info[4],info[5],info[6],info[7],info[8]);
 		controllerCliente.getCliente().add(c);
 		
@@ -36,8 +36,9 @@ public class UPMFit {
 		controllerCliente.getCliente().add(c4);
 		
 		Cliente c5 = new Cliente (Integer.parseInt(info[0]),info[1],Integer.parseInt(info[2]),Integer.parseInt(info[3]),info[4],info[5],info[6],info[7],info[8]);
-		controllerCliente.getCliente().add(c5);
 		
+		controllerCliente.getCliente().add(c5);
+		*/
 //		 controllerCliente.altaCliente("20,hombre,80,258258123,x1564564,asdqwe,pepe.fernandez@alumnos.upm.es,Pepe,PepeFit");
 		
 		//monitores
@@ -50,24 +51,21 @@ public class UPMFit {
 		Monitor m4 = new Monitor(895648, "37498210P", "amarillo6B", "ana_gomez@upm.es", "Ana", "AnaUPM");
 		controllerMonitor.getMonitor().add(m4);
 		
-		TActividad general, bicicleta, baile, gimnasia;
+		//TActividad a = general, bicicleta, baile, gimnasia;
 		//sesiones
-		SesionCerrada s1 = new SesionCerrada(m1, general , 20, "14:00", "15:00");
+		SesionCerrada s1 = new SesionCerrada(m1, TActividad.general , 20, "14:00", "15:00");
 		controllerSesiones.getSesiones().add(s1);
-		SesionCerrada s2 = new SesionCerrada(m2, gimnasia , 20, "17:00", "18:00");
+		SesionCerrada s2 = new SesionCerrada(m2, TActividad.gimnasia , 20, "17:00", "18:00");
 		controllerSesiones.getSesiones().add(s2);
-		SesionCerrada s3 = new SesionCerrada(m1, bicicleta , 40, "15:00", "16:00");
+		SesionCerrada s3 = new SesionCerrada(m1, TActividad.bicicleta , 40, "15:00", "16:00");
 		controllerSesiones.getSesiones().add(s3);
-		SesionCerrada s4 = new SesionCerrada(m1, baile , 30, "16:00", "17:00");
+		SesionCerrada s4 = new SesionCerrada(m1, TActividad.baile , 30, "16:00", "17:00");
 		controllerSesiones.getSesiones().add(s4);
 
 	}
 
-	public void main(){
 
-	}
-
-	public String operate(){
+	public String operate(){ //el menu de las operaciones que queremos hacer (recordar hacer una vista)
 		return "";
 	}
 	
@@ -81,18 +79,15 @@ public class UPMFit {
 	}
 	
 	
-	
 	 public static void main( String[] args ){
 		 UPMFit UPMF = new UPMFit();
-		 UPMF.init();
+		// UPMF.init();
 		 UPMF.start();
-		 //int edad, String sexo, double peso, int tarjeta, String dni, String contrasena, String correo, String nombre, String nombreUsuario
 		 
 		 
 	 }
 
-	private void start() {
-
+	private void start() { // operaciones 
 
 	controllerCliente.altaCliente();
 		

@@ -1,6 +1,6 @@
 package UPM.CITIM22.UPMFit22_09;
 
-
+import servidor.UPMUsers;
 
 /**
  * @author The Administrator
@@ -40,5 +40,9 @@ public interface InterfazCliente extends InterfazUsNoAdmin{
 	 * @param tarjeta
 	 */
 	public void setTarjeta(int tarjeta);
+
+	public UPMUsers getRol();
+
+	public void setRol(UPMUsers rol);
 
 }

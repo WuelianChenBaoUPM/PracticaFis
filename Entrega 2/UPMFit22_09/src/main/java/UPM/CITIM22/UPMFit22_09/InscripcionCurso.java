@@ -39,6 +39,8 @@ public class InscripcionCurso {
 	public InscripcionCurso(Cliente client , Curso curso){
 		this.cliente = client;
 		this.curso = curso;
+		cliente.getInscripciones().add(this);
+		curso.getInscripciones().add(this);
 		
 	}
 	
@@ -54,7 +56,7 @@ public class InscripcionCurso {
 	}
 			
 	public Curso getCurso(){
-		return null;
+		return curso;
 	}
 	
 	public void setCliente(Cliente cliente)  {
@@ -62,7 +64,7 @@ public class InscripcionCurso {
 	}
 			
 	public Cliente getCliente(){
-		return null;
+		return cliente;
 	}
 			
 	
