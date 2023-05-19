@@ -10,13 +10,13 @@ public class ControladorInscripciones {
 	public ControladorInscripciones() {
 		this.inscripciones = new ArrayList<>();
 	}
-	public void inscribirseACurso() {
-		String datos[] = view.datosInscripcion().split(",");
+	public void inscribirseACurso(String idCliente,String idCurso) {
+		
 		ControladorCliente cliente = new ControladorCliente();
 		ControladorCurso curso = new ControladorCurso();
 	
-		InscripcionCurso ins = new InscripcionCurso(cliente.obtenerClientePorId(Integer.parseInt(datos[0]))
-				,curso.obtenerCursoPorId(Integer.parseInt(datos[1])));
+		InscripcionCurso ins = new InscripcionCurso(cliente.obtenerClientePorId(Integer.parseInt(idCliente))
+				,curso.obtenerCursoPorId(Integer.parseInt(idCurso)));//idCurso
 		inscripciones.add(ins);
 	}
 	

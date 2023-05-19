@@ -29,10 +29,7 @@ public class ViiewCliente {
 		
 		System.out.println("nombre : "+c.getNombre()+"\nnombre de usuario : " + c.getNombreUsuario() +"\ncorreo : " + c.getCorreo() + 
 				"\ndni : "+c.getDni()+"\nedad :"+ c.getEdad() + "\npeso : "+c.getPeso() + "\nsexo : "+c.getSexo());
-	if(c.getRol()!= null)
-	{
-		System.out.println("rol :" +c.getRol());
-	}
+	
 	}
 
 	public void renderListaCliente(List<Cliente> clientes ){
@@ -43,15 +40,14 @@ public class ViiewCliente {
 	}
 	
 
-
-	public String formAltaCliente() {
+	
+	public void  formAltaCliente() {
 		
 		//int edad, String sexo, double peso, int tarjeta, String dni, String contrasena, String correo, String nombre, String nombreUsuario
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Escriba los datos del nuevo cliente de la forma +"
 				+ "\n'edad,sexo,peso,tarjeta,dni,contrasena,correo,nombre,nombreUsuario'");
 		String datos = sc.nextLine();
-		return datos;
 		
 	}
 	

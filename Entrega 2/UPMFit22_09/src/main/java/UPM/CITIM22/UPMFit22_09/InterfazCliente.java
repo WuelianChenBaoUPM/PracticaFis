@@ -41,8 +41,7 @@ public interface InterfazCliente extends InterfazUsNoAdmin{
 	 */
 	public void setTarjeta(int tarjeta);
 
-	public UPMUsers getRol();
 
-	public void setRol(UPMUsers rol);
+
 
 }

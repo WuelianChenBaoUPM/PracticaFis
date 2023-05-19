@@ -18,7 +18,6 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	private int peso;
 	private String sexo;
 	private int tarjetaCredito;
-	private UPMUsers rol = null;
 	private int id;
 	
 	public Cliente() {}
@@ -27,10 +26,7 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	public void finalize() throws Throwable {
 		super.finalize();
 	}
-	public void destroy(){
-
-	}
-
+	
 	public int getEdad(){
 		return this.edad;
 	}
@@ -59,7 +55,8 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	 * @param nombre
 	 * @param nombreUsuario
 	 */
-	public Cliente(int edad, String sexo, int peso, int tarjeta, String dni, String contrasena, String correo, String nombre, String nombreUsuario){
+	public Cliente(int edad, String sexo, int peso, int tarjeta, String dni, String contrasena, String correo,
+			String nombre, String nombreUsuario){
 		super (dni,contrasena , correo, nombre,nombreUsuario);
 		this.edad = edad;
 		this.sexo = sexo;
@@ -122,6 +119,8 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 		addInscripcionCurso(inscripcion);
 	}
 	
+	
+	
 	public void setInscripciones(List<InscripcionCurso> inscripciones)  {
 			
 	}
@@ -139,12 +138,6 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	}
 
 
-	public UPMUsers getRol() {
-		return rol;
-	}
 
 
-	public void setRol(UPMUsers rol) {
-		this.rol = rol;
-	}
 }//end Cliente

@@ -17,7 +17,6 @@ public class ControladorCliente {
 	
 	private List<Cliente> clientes;
 	private ViiewCliente ViewCliente;
-
 	private ControladorCurso controllerCurso;
 	
 	
@@ -30,24 +29,16 @@ public class ControladorCliente {
 	public void finalize() throws Throwable {
 
 	}
-	public Cliente crearCliente(){
-		return new Cliente();
-	}
 	
-
-	
-	
-	public void altaCliente() {
-		
-		String datos = ViewCliente.formAltaCliente();
+	public void altaCliente(String datos) {
 		
 		String info[] = datos.split(",");
 		
 		if (validacion(info[6])) {// comprueba si es de la UPM
 		UPMUsers rol = getRol(info[6]); // hay que cambiar creaCliente para que me cree un alumno o un trabajador (falta crear las clases )
 		
-		Cliente c = creaCliente(info);
-		c.setRol(rol);
+		Cliente c = creaClienteInterno(info,rol);
+		
 		clientes.add(c);
 		c.setId(clientes.size());
 		
@@ -66,15 +57,36 @@ public class ControladorCliente {
 	
 	
 	private Cliente creaCliente(String[] info) {
+		
+		
 		String contrasenia = cifradoUPM(info[5]);
+		
 		return 	new Cliente (Integer.parseInt(info[0]),info[1],Integer.parseInt(info[2]),Integer.parseInt(info[3]),info[4],info[5],info[6],info[7],info[8]);
 	}
-	/*
-	private Cliente creaClienteInterno(String[] info) {
-
+	
+	private Cliente creaClienteInterno(String[] info,UPMUsers rol) {
+		Object InterfazCliente;
+		// int edad, String sexo, int peso, int tarjeta, String dni, String contrasena, 
+		//String correo, String nombre, String nombreUsuario,String matricula
+		if (rol == UPMUsers.ALUMNO) {
+			Estudiante c = new Estudiante(Integer.parseInt(info[0]),info[1],Integer.parseInt(info[2]),Integer.parseInt(info[3]),
+					info[4],info[5],info[6],info[7],info[8],info[9]); 
+			return c;
+		}
+		else {  
+			Personal c = new Personal(0, null, 0, 0, null, null, null, null, null, 0, rol);
+			return c;
+		}
+			
+	}
+	
+	
+	private Cliente creaClienteInterno(String[] info,String matricula) {
+		
+		
 		return 	new Cliente (Integer.parseInt(info[0]),info[1],Integer.parseInt(info[2]),Integer.parseInt(info[3]),info[4],info[5],info[6],info[7],info[8]);
 	}
-	*/
+	
 	private String cifradoUPM(String contrasenia) {
 		
 		String cifrado = Cifrado.cifrar(contrasenia);
@@ -97,7 +109,7 @@ public class ControladorCliente {
 		Curso curso =controllerCurso.obtenerCursoPorId(idCurso);
 		
 		if(cliente != null && curso!= null ) {
-			cliente.inscribirseACurso(curso);
+			//cliente.getInscripciones().add(inscripcion);
 		}
 		
 			
