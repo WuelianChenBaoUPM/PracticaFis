@@ -57,19 +57,10 @@ public class UPMFit {
 		return "";
 	}
 	
-	public void cursoInicio(String datos) {
-		tratadoDatos(datos);
-		
-	}
-	
-	private void tratadoDatos(String datos) {
-		
-	}
-	
 	
 	 public static void main( String[] args ){
 		 UPMFit UPMF = new UPMFit();
-		// UPMF.init();
+		 UPMF.init();
 		 UPMF.start();
 		 
 		 
