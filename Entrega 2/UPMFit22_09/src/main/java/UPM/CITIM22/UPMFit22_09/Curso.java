@@ -18,7 +18,7 @@ public class Curso implements InterfazCurso {
 	private String nombre;
 	private int id ;
 	// public   ListaCursos  m_ListaCursos;
-	public ViewSesionCerrada  m_ViewSesionCerrada;
+	public ViewSesionCerrada  ViewSesionCerrada;
 
 	public Curso(){
 
@@ -28,13 +28,6 @@ public class Curso implements InterfazCurso {
 	public void finalize() throws Throwable {
 
 	}
-	public SesionCerrada crearSesionCerrada(Monitor monitor, TActividad actividad, int aforo, String horaFin, String horaInicio){
-		
-		SesionCerrada sesion = new SesionCerrada(monitor, actividad, aforo, horaFin, horaInicio);
-		
-		return sesion;
-	}
-
 	public void destroy(){
 
 	}
@@ -66,14 +59,57 @@ public class Curso implements InterfazCurso {
 	 * @param horario
 	 * @param nombre
 	 */
-	public Curso(SesionCerrada sesion1, SesionCerrada sesion2, String fechaInicio, String fechaFin, String horario, String nombre){
-		this.sesiones.add(sesion1);
-		this.sesiones.add(sesion2);
+	public Curso( String fechaInicio, String fechaFin, String horario, String nombre,String sesion1,String sesion2){
+		
+		
 		this.fechaInicio = fechaInicio;
 		this.fechaFIn = fechaFin;
 		this.horario = horario;
 		this.nombre = nombre;
+		
+		SesionCerrada ses1 = crearSesionCerrada(sesion1);
+		SesionCerrada ses2 = crearSesionCerrada(sesion2);
+		
+		this.sesiones.add(ses1);
+		this.sesiones.add(ses2);
+		
 	}
+	
+	private  SesionCerrada crearSesionCerrada(String datos) {
+		
+		String []info = datos.split(",");
+		//TActividad actividad, int aforo, String horaFin, String horaInicio,Monitor monitor
+		
+		TActividad actividad ;
+		switch (Integer.parseInt(info[0])) {
+		case 1:
+			actividad = TActividad.baile;
+			break;
+		case 2:	
+			actividad = TActividad.bicicleta;
+			break;
+		default:
+		case 3:
+			actividad = TActividad.general;
+			break;
+		case 4:
+			actividad = TActividad.gimnasia;	
+			break;
+		case 5:
+			actividad = TActividad.natacion;
+			break;
+		case 6:	
+			actividad = TActividad.relax;
+			break;
+			
+		}
+		//preguntar si la clase curso puede llamar a la clase ControllerMonitor
+		ControladorMonitor controllerM = new ControladorMonitor();
+	
+		Monitor monitor = controllerM.obtenerMonitorPorId(Integer.parseInt(info[4]));
+		return new SesionCerrada(actividad,Integer.parseInt(info[1]),info[2],info[3],monitor);
+	}
+	
 	public void setId (int id) {
 		this.id = id;
 	}
@@ -95,10 +131,7 @@ public class Curso implements InterfazCurso {
 
 	}
 
-	public void visualizarInformacion(){
-
-	}
-
+	
 	/**
 	 * 
 	 * @param fecha
@@ -158,11 +191,5 @@ public class Curso implements InterfazCurso {
 		return null;
 	}
 			
-	public void addInscripcionCurso(InscripcionCurso inscripcion) {
-				
-	}
-			
-	public void removeInscripcionCurso (InscripcionCurso inscripcion) {
-				
-	}
+	
 }//end Curso

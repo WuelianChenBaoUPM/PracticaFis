@@ -22,18 +22,25 @@ public class ControladorMonitor {
 	public void finalize() throws Throwable {
 
 	}
-	public Monitor crearMonitor(double numeroDeCuenta, String dni, String contrasena, String correoElectronico, 
-			String nombre, String nombreUsuario){
-		
-		Monitor monitor = new Monitor(numeroDeCuenta, dni, contrasena, correoElectronico, nombre, nombreUsuario);
-		
-		return monitor;
-	}
 
-	public String listaMonitores(){
-		return "";
+	public void crearMonitor(String datos){
+	
+		String [] info = datos.split(",");
+		Monitor monitor = new Monitor(Double.parseDouble(info[0]), info[1], info[2], info[3], info[4], info[5]);
+		monitores.add(monitor);
+		monitor.setId(monitores.size());
+		//view de que ha quedado creado
 	}
 	
+	
+	public Monitor obtenerMonitorPorId(int id){
+		Monitor monitor = new Monitor();
+			for (Monitor m : monitores) {
+				if (m.getId() == id )	
+					monitor = m;
+				}
+		return monitor;
+	}
 	//metodos relacion con Monitor
 	
 		public void setMonitor(List<Monitor> monitores)  {

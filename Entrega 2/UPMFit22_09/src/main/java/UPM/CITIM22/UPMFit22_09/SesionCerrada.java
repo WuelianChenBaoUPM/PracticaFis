@@ -13,6 +13,12 @@ public class SesionCerrada extends Sesion implements InterfazSesion {
 
 	}
 
+	public SesionCerrada(TActividad actividad, int aforo, String horaFin, String horaInicio,Monitor monitor ){
+		
+		super(actividad, aforo, horaFin, horaInicio);
+		this.monitor = monitor;
+	}
+	
 	public void finalize() throws Throwable {
 		super.finalize();
 	}
@@ -54,11 +60,6 @@ public class SesionCerrada extends Sesion implements InterfazSesion {
 	 * @param horaFin
 	 * @param horaIncio
 	 */
-	public SesionCerrada(Monitor monitor, TActividad actividad, int aforo, String horaFin, String horaInicio){
-		
-		super(actividad, aforo, horaFin, horaInicio);
-		this.monitor = monitor;
-	}
 	
 
 }//end SesionCerrada

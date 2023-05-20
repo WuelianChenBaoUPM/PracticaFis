@@ -65,7 +65,7 @@ public class ControladorCliente {
 	}
 	
 	private Cliente creaClienteInterno(String[] info,UPMUsers rol) {
-		Object InterfazCliente;
+		
 		// int edad, String sexo, int peso, int tarjeta, String dni, String contrasena, 
 		//String correo, String nombre, String nombreUsuario,String matricula
 		if (rol == UPMUsers.ALUMNO) {
@@ -74,18 +74,13 @@ public class ControladorCliente {
 			return c;
 		}
 		else {  
-			Personal c = new Personal(0, null, 0, 0, null, null, null, null, null, 0, rol);
+			Personal c = new Personal(Integer.parseInt(info[0]),info[1],Integer.parseInt(info[2]),Integer.parseInt(info[3]),
+					info[4],info[5],info[6],info[7],info[8],Integer.parseInt(info[9]));
 			return c;
 		}
 			
 	}
 	
-	
-	private Cliente creaClienteInterno(String[] info,String matricula) {
-		
-		
-		return 	new Cliente (Integer.parseInt(info[0]),info[1],Integer.parseInt(info[2]),Integer.parseInt(info[3]),info[4],info[5],info[6],info[7],info[8]);
-	}
 	
 	private String cifradoUPM(String contrasenia) {
 		

@@ -12,11 +12,23 @@ public class Monitor extends UsuarioNoAdmin implements InterfazMonitor {
 	private List<SesionCerrada> sesiones;
 	
 	private double numeroDeCuenta;
+	
+	private int id ;
 
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+	public Monitor() {}
 	public Monitor(double numeroDeCuenta, String dni, String contrasena, String correoElectronico, String nombre, String nombreUsuario){
 		
 			super(dni, contrasena, correoElectronico, nombre, nombreUsuario);
 			this.numeroDeCuenta = numeroDeCuenta;
+	
+	
 	}
 
 	/**

@@ -10,11 +10,11 @@ import java.util.List;
 public class ControladorCurso {
 
 	private List<Curso> cursos;
-	public Curso m_Curso;
-	public viewCurso m_viewCurso;
+	
+	public viewCurso viewCurso;
 
 	public ControladorCurso(){
-
+		//recordar hacer el new  de las listas
 	}
 
 	public void finalize() throws Throwable {
@@ -28,9 +28,16 @@ public class ControladorCurso {
 		return "";
 	}
 	
-	public void altaCurso(SesionCerrada sesion1, SesionCerrada sesion2, String fechaInicio, String fechaFin, String horario, String nombre) {
-		Curso curso = new Curso(sesion1, sesion2, fechaInicio, fechaFin, horario, nombre);
+	public void altaCurso(String datos) {
+		String info [] = datos.split(",");
+		//String fechaInicio, String fechaFin, String horario, String nombre,String sesion1,String sesion2
+		Curso curso = new Curso (info[0],info[1],info[2],info[3],info[4],info[5]);
+		cursos.add(curso);
+		curso.setId(cursos.size());
+		
+	
 	}
+	
 	public Curso obtenerCursoPorId(int id) {
 		Curso curso = new Curso();
 		for (Curso c : cursos) {

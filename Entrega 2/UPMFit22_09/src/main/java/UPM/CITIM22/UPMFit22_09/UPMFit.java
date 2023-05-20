@@ -9,7 +9,7 @@ public class UPMFit {
 
 
 	public ControladorAdmin controllerAdmin;
-	public ControladorCliente controllerCliente= new ControladorCliente();
+	public ControladorCliente controllerCliente;
 	public ControladorMonitor controllerMonitor;
 	public ControladorCurso controllerCurso;
 	public Curso controllerSesiones;
@@ -23,8 +23,17 @@ public class UPMFit {
 	}
 	private void init(){ // inicializacion de todas las variables y cosas a tener previos a la ejecucion del menú
 		
+		this.controllerCliente= new ControladorCliente();
 		
-//		 controllerCliente.altaCliente("20,hombre,80,258258123,x1564564,asdqwe,pepe.fernandez@alumnos.upm.es,Pepe,PepeFit");
+		/*int edad, String sexo, int peso, int tarjeta, String dni, String contrasena, String correo,
+			String nombre, String nombreUsuario*/
+		
+		controllerCliente.altaCliente("20,hombre,80,258258123,x1564564,asdqwe,pepe.fernandez@gmail.com,Pepe,PepeFit");
+		//estudiante : tiene matricula
+		controllerCliente.altaCliente("20,hombre,80,258258123,x1564564,asdqwe,jose.fernandez@alumnos.upm.es,jose,JoseFit,bs012");
+		 //empleado :tiene antiguedad y tipo de empleado
+		controllerCliente.altaCliente("20,hombre,80,258258123,x1564564,asdqwe,Rafa.Miñano@profesores.upm.es,Rafael,2");
+		 
 		
 		//monitores
 		/*

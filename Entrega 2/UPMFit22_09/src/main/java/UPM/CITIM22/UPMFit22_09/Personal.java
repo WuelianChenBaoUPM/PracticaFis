@@ -1,5 +1,6 @@
 package UPM.CITIM22.UPMFit22_09;
 
+import servidor.ObtencionDeRol;
 import servidor.UPMUsers;
 
 public class Personal extends Cliente{
@@ -8,12 +9,12 @@ public class Personal extends Cliente{
 	private float descuento;
 	
 	public Personal (int edad, String sexo, int peso, int tarjeta, String dni, String contrasena, 
-			String correo, String nombre, String nombreUsuario,int antiguedad,UPMUsers tipoEmpleado) {
+			String correo, String nombre, String nombreUsuario,int antiguedad) {
 		super(edad,sexo,peso,tarjeta,dni,contrasena,correo,nombre,nombreUsuario);
 		
 		this.antiguedad = antiguedad;
 		this.descuento = (float) 0.25+ calcularDesc(antiguedad);
-		this.tipoEmpleado = tipoEmpleado;
+		this.tipoEmpleado = ObtencionDeRol.get_UPM_AccountRol(correo);
 		
 	}
 	
