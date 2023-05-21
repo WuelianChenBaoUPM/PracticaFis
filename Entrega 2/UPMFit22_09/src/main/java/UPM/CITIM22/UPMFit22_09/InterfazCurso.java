@@ -1,5 +1,6 @@
 package UPM.CITIM22.UPMFit22_09;
 
+import java.util.List;
 
 /**
  * @author The Administrator
@@ -40,4 +41,6 @@ public interface InterfazCurso {
 	 */
 	public void setNombre(String nombre);
 
+	public List<SesionCerrada> getListaSesiones();
+	
 }

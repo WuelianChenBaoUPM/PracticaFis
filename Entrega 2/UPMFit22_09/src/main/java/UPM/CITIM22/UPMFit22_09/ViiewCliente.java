@@ -26,14 +26,14 @@ public class ViiewCliente {
 	
 
 	public void renderCliente(InterfazCliente c){
-		
-		System.out.println("nombre : "+c.getNombre()+"\nnombre de usuario : " + c.getNombreUsuario() +"\ncorreo : " + c.getCorreo() + 
+		System.out.println();
+		System.out.println("Id : "+ c.getId() +"\nnombre : "+c.getNombre()+"\nnombre de usuario : " + c.getNombreUsuario() +"\ncorreo : " + c.getCorreo() + 
 				"\ndni : "+c.getDni()+"\nedad :"+ c.getEdad() + "\npeso : "+c.getPeso() + "\nsexo : "+c.getSexo());
 	
 	}
 
-	public void renderListaCliente(List<Cliente> clientes ){
-		for (Cliente c :clientes) {
+	public void renderListaCliente(List<InterfazCliente> clientes ){
+		for (InterfazCliente c :clientes) {
 			renderCliente(c);	
 		}
 		

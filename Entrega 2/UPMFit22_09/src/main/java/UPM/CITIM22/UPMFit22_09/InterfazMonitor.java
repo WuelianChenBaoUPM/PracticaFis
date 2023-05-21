@@ -7,7 +7,7 @@ package UPM.CITIM22.UPMFit22_09;
  * @version 1.0
  * @created 28-abr.-2023 0:12:11
  */
-public interface InterfazMonitor {
+public interface InterfazMonitor extends  InterfazUsNoAdmin{
 
 	public void cobrar();
 

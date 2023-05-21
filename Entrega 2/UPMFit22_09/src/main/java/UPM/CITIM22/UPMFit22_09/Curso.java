@@ -33,19 +33,19 @@ public class Curso implements InterfazCurso {
 	}
 
 	public String  getFechaFin(){
-		return "";
+		return this.fechaFIn;
 	}
 
 	public String getFechaInicio(){
-		return "" ;
+		return this.fechaInicio ;
 	}
 
 	public String getHorario(){
-		return " ";
+		return this.horario;
 	}
 
 	public String getNombre(){
-		return "";
+		return this.nombre;
 	}
 
 	public String listaSesionesCerradas(){
@@ -189,6 +189,13 @@ public class Curso implements InterfazCurso {
 			
 	public List<InscripcionCurso> getInscripciones(){
 		return null;
+	}
+
+
+	@Override
+	public List<SesionCerrada> getListaSesiones() {
+		 
+		return this.sesiones;
 	}
 			
 	

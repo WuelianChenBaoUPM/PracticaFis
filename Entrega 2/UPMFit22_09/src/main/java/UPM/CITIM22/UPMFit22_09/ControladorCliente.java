@@ -29,6 +29,18 @@ public class ControladorCliente {
 	public void finalize() throws Throwable {
 
 	}
+	public void verClientes () {
+		ViewCliente.renderListaCliente(convertirLista());
+	}
+	
+	private List<InterfazCliente> convertirLista(){
+		 List<InterfazCliente> clientesInterfaz = new ArrayList<>();
+		    for (Cliente c : clientes) {
+		        clientesInterfaz.add(c);
+		    }
+		    return clientesInterfaz;
+	}
+	
 	
 	public void altaCliente(String datos) {
 		
@@ -41,18 +53,16 @@ public class ControladorCliente {
 		
 		clientes.add(c);
 		c.setId(clientes.size());
-		
+		 
 		}
 		
 		else {	
 			Cliente c = creaCliente(info);
 			clientes.add(c);
 			c.setId(clientes.size());
-			
+		 
 		}
 	
-		ViewCliente.renderListaCliente(clientes);
-		
 	}
 	
 	
@@ -64,10 +74,9 @@ public class ControladorCliente {
 		return 	new Cliente (Integer.parseInt(info[0]),info[1],Integer.parseInt(info[2]),Integer.parseInt(info[3]),info[4],info[5],info[6],info[7],info[8]);
 	}
 	
+	
 	private Cliente creaClienteInterno(String[] info,UPMUsers rol) {
 		
-		// int edad, String sexo, int peso, int tarjeta, String dni, String contrasena, 
-		//String correo, String nombre, String nombreUsuario,String matricula
 		if (rol == UPMUsers.ALUMNO) {
 			Estudiante c = new Estudiante(Integer.parseInt(info[0]),info[1],Integer.parseInt(info[2]),Integer.parseInt(info[3]),
 					info[4],info[5],info[6],info[7],info[8],info[9]); 
@@ -119,10 +128,7 @@ public class ControladorCliente {
 		return cliente; 
 	}
 	
-	public void verListaClientes() {
-		ViewCliente.renderListaCliente(this.clientes);
-		
-	}
+
 
 	public String listaClientes(){
 		return "";

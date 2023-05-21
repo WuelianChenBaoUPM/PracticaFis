@@ -8,7 +8,7 @@ package UPM.CITIM22.UPMFit22_09;
 public class SesionCerrada extends Sesion implements InterfazSesion {
 
 	private Monitor monitor;
-
+	private int id;
 	public SesionCerrada(){
 
 	}
@@ -33,7 +33,11 @@ public class SesionCerrada extends Sesion implements InterfazSesion {
 	public TActividad getActividad(){
 		return super.getActividad();
 	}
-
+	public void setId (int id) {
+		this.id = id;
+	}
+	public int getId () {return this.id;}
+	
 	public int getAforo(){
 		return super.getAforo();
 	}

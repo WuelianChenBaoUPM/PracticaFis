@@ -41,7 +41,8 @@ public interface InterfazCliente extends InterfazUsNoAdmin{
 	 */
 	public void setTarjeta(int tarjeta);
 
-
-
+	public int getId ();
+	public void setId (int id) 
+	;
 
 }

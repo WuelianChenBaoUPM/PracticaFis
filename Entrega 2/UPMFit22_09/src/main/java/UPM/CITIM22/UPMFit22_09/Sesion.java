@@ -5,6 +5,7 @@ package UPM.CITIM22.UPMFit22_09;
  * @version 1.0
  * @created 28-abr.-2023 0:11:52
  */
+
 public class Sesion implements InterfazSesion {
 
 	private TActividad actividad;

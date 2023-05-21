@@ -12,28 +12,42 @@ public class ControladorMonitor {
 	
 	private List<Monitor> monitores;
 
-	public ViewMonitor m_ViewMonitor;
-	public InterfazMonitor m_InterfazMonitor;
-
+	public ViewMonitor viewMonitor;
+	
 	public ControladorMonitor(){
 		this.monitores = new ArrayList<>();
+		this.viewMonitor= new ViewMonitor(); 
+		
 	}
 
 	public void finalize() throws Throwable {
 
 	}
-
-	public void crearMonitor(String datos){
-	
+	public void altaMonitor(String datos) {
 		String [] info = datos.split(",");
-		Monitor monitor = new Monitor(Double.parseDouble(info[0]), info[1], info[2], info[3], info[4], info[5]);
-		monitores.add(monitor);
+		Monitor monitor = crearMonitor(info);
 		monitor.setId(monitores.size());
-		//view de que ha quedado creado
+		monitores.add(monitor);
+		
+	}
+	public void verMonitores() {
+		viewMonitor.renderListaMonitores(convertirLista());
+	}
+	private List<InterfazMonitor> convertirLista(){
+		 List<InterfazMonitor> monitorInterfaz = new ArrayList<>();
+		    for (Monitor m : monitores) {
+		    	monitorInterfaz .add(m);
+		    }
+		    return monitorInterfaz ;
+	}
+	private Monitor crearMonitor(String [] info){
+		Monitor monitor = new Monitor(Double.parseDouble(info[0]), info[1], info[2], info[3], info[4], info[5]);	
+		return monitor;
+	
 	}
 	
 	
-	public Monitor obtenerMonitorPorId(int id){
+	public  Monitor obtenerMonitorPorId(int id){
 		Monitor monitor = new Monitor();
 			for (Monitor m : monitores) {
 				if (m.getId() == id )	

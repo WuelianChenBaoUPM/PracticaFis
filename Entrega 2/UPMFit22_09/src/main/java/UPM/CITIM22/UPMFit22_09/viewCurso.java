@@ -17,7 +17,14 @@ public class viewCurso {
 	}
 	 
 
-	public void renderCurso(){
+	public void renderCurso(InterfazCurso curso){
+		ViewSesionCerrada viewSesionesC = new ViewSesionCerrada();
+		System.out.println("Curso : "+ curso.getNombre() +"\nFecha de Inicio : "+curso.getFechaInicio()+"\nFecha de Fin : "+curso.getFechaFin()+"\nHorario : "+ curso.getHorario());
+		
+		System.out.println("Sesiones que lo componen : ");
+		
+		
+		viewSesionesC.renderLisatSesionesCerradas(curso.getListaSesiones());
 		
 	}
 
@@ -25,11 +32,6 @@ public class viewCurso {
 
 	}
 	
-	public void visualizarCurso(InterfazCurso interfaz) {
-		
-		
-		
-	}
-	
+
 	
 }//end viewCurso

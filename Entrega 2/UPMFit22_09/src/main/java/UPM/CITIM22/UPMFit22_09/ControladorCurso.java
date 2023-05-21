@@ -28,6 +28,11 @@ public class ControladorCurso {
 		return "";
 	}
 	
+	public void verCurso(String id) {
+		int idCurso = Integer.parseInt(id);
+		viewCurso.renderCurso(obtenerCursoPorId(idCurso));
+	}
+	
 	public void altaCurso(String datos) {
 		String info [] = datos.split(",");
 		//String fechaInicio, String fechaFin, String horario, String nombre,String sesion1,String sesion2

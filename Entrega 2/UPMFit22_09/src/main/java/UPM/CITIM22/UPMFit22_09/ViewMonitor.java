@@ -1,5 +1,6 @@
 package UPM.CITIM22.UPMFit22_09;
 
+import java.util.List;
 
 /**
  * @author The Administrator
@@ -17,11 +18,14 @@ public class ViewMonitor {
 	}
 	 
 
-	public void renderListaMonitores(){
-
+	public void renderListaMonitores(List<InterfazMonitor> monitores){
+		for(InterfazMonitor m : monitores) {
+			renderMonitor(m);	
+		}
 	}
 
-	public void renderMonitor(){
-
+	public void renderMonitor(InterfazMonitor monitor){
+		System.out.println();
+		System.out.println("Nombre : "+ monitor.getNombre() +"\nNombre de Usuario : "+monitor.getNombreUsuario()+"\nDNI : "+monitor.getDni());
 	}
 }//end ViewMonitor

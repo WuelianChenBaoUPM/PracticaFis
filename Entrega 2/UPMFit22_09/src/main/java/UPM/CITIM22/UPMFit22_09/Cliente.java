@@ -111,6 +111,7 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 		this.id = id;
 	}
 	public int getId () {return this.id;}
+	
 	//metodos de la relacion con Curso-InscripcionCurso
 	
 	public void inscribirseACurso (Curso c) {
