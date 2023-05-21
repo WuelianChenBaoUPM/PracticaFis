@@ -58,9 +58,8 @@ public class ControladorCliente {
 		
 		else {	
 			Cliente c = creaCliente(info);
-			clientes.add(c);
 			c.setId(clientes.size());
-		 
+			clientes.add(c);
 		}
 	
 	}

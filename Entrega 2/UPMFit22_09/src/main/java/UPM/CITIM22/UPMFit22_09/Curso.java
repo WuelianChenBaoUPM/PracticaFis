@@ -1,5 +1,6 @@
 package UPM.CITIM22.UPMFit22_09;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -17,11 +18,24 @@ public class Curso implements InterfazCurso {
 	private String horario;
 	private String nombre;
 	private int id ;
-	// public   ListaCursos  m_ListaCursos;
-	public ViewSesionCerrada  ViewSesionCerrada;
+	private ControladorMonitor controladorMonitor;		
+	
+	public ControladorMonitor getControladorMonitor() {
+		return controladorMonitor;
+	}
+
+
+	public ViewSesionCerrada  viewSesionCerrada;
+
+	public void setControladorMonitor(ControladorMonitor controladorMonitor) {
+		this.controladorMonitor = controladorMonitor;
+	}
+
 
 	public Curso(){
-
+		this.viewSesionCerrada = new ViewSesionCerrada();
+		this.sesiones = new ArrayList<>();
+		controladorMonitor =new ControladorMonitor();
 	}
 	
 
@@ -48,9 +62,7 @@ public class Curso implements InterfazCurso {
 		return this.nombre;
 	}
 
-	public String listaSesionesCerradas(){
-		return "";
-	}
+ 
 
 	/**
 	 * 
@@ -59,23 +71,31 @@ public class Curso implements InterfazCurso {
 	 * @param horario
 	 * @param nombre
 	 */
-	public Curso( String fechaInicio, String fechaFin, String horario, String nombre,String sesion1,String sesion2){
+	public Curso( String fechaInicio, String fechaFin, String horario, String nombre,SesionCerrada sesion1,SesionCerrada sesion2){
 		
-		
+
+		this.viewSesionCerrada = new ViewSesionCerrada();
+		this.sesiones = new ArrayList<>();
 		this.fechaInicio = fechaInicio;
 		this.fechaFIn = fechaFin;
 		this.horario = horario;
 		this.nombre = nombre;
 		
-		SesionCerrada ses1 = crearSesionCerrada(sesion1);
-		SesionCerrada ses2 = crearSesionCerrada(sesion2);
-		
-		this.sesiones.add(ses1);
-		this.sesiones.add(ses2);
+	 
+		this.sesiones.add(sesion1);
+		 
+		this.sesiones.add(sesion2);
 		
 	}
 	
-	private  SesionCerrada crearSesionCerrada(String datos) {
+	public void altaSesionCerrada(String datos) {
+		SesionCerrada sesion = crearSesionCerrada( datos);
+		sesion.setId(sesiones.size());
+		this.sesiones.add(sesion);
+		
+	}
+	
+	 public SesionCerrada crearSesionCerrada(String datos) {
 		
 		String []info = datos.split(",");
 		//TActividad actividad, int aforo, String horaFin, String horaInicio,Monitor monitor
@@ -100,16 +120,31 @@ public class Curso implements InterfazCurso {
 			break;
 		case 6:	
 			actividad = TActividad.relax;
-			break;
-			
+			break;	
 		}
+		
 		//preguntar si la clase curso puede llamar a la clase ControllerMonitor
-		ControladorMonitor controllerM = new ControladorMonitor();
-	
-		Monitor monitor = controllerM.obtenerMonitorPorId(Integer.parseInt(info[4]));
+		 
+		Monitor monitor = controladorMonitor.obtenerMonitorPorId(Integer.parseInt(info[4]));
+		
 		return new SesionCerrada(actividad,Integer.parseInt(info[1]),info[2],info[3],monitor);
 	}
+	 
+	 
+	 private List<InterfazSesion> convertirLista(){
+		 List<InterfazSesion> sesionesInterfaz = new ArrayList<>();
+		    for (InterfazSesion s : sesiones) {
+		    	sesionesInterfaz .add(s);
+		    }
+		    return sesionesInterfaz ;
+	}
 	
+	 
+	public void verListaSesiones() {
+		
+		viewSesionCerrada.renderLisatSesionesCerradas(getListaSesiones());
+	}
+	 
 	public void setId (int id) {
 		this.id = id;
 	}
@@ -174,13 +209,7 @@ public class Curso implements InterfazCurso {
 		return this.sesiones;
 	}
 	
-	public void addSesion(SesionCerrada sesion) {
-		this.sesiones.add(sesion);
-	}
-	
-	public void removeSesion (SesionCerrada sesion) {
-		this.sesiones.remove(sesion);
-	}
+	 
 	//metodos de la relacion con Cliente-InscripcionCurso
 	
 	public void setInscripciones(List<InscripcionCurso> inscripciones)  {
@@ -188,14 +217,14 @@ public class Curso implements InterfazCurso {
 	}
 			
 	public List<InscripcionCurso> getInscripciones(){
-		return null;
+		return this.inscripciones;
 	}
 
 
 	@Override
-	public List<SesionCerrada> getListaSesiones() {
+	public List<InterfazSesion> getListaSesiones() {
 		 
-		return this.sesiones;
+		return convertirLista();
 	}
 			
 	

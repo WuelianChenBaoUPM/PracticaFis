@@ -1,5 +1,8 @@
 package UPM.CITIM22.UPMFit22_09;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author The Administrator
  * @version 1.0
@@ -7,16 +10,23 @@ package UPM.CITIM22.UPMFit22_09;
  */
 public class SesionCerrada extends Sesion implements InterfazSesion {
 
-	private Monitor monitor;
-	private int id;
+	private  Monitor   monitor ;
+	public Monitor getMonitor() {
+		return monitor;
+	}
+
+	public void setMonitor(Monitor monitor) {
+		this.monitor = monitor;
+	}
+
 	public SesionCerrada(){
 
 	}
 
 	public SesionCerrada(TActividad actividad, int aforo, String horaFin, String horaInicio,Monitor monitor ){
 		
-		super(actividad, aforo, horaFin, horaInicio);
-		this.monitor = monitor;
+		super(actividad, aforo, horaFin, horaInicio); 
+		this.monitor= monitor;
 	}
 	
 	public void finalize() throws Throwable {
@@ -26,17 +36,11 @@ public class SesionCerrada extends Sesion implements InterfazSesion {
 
 	}
 	
-	public Monitor getMonitor() {
-		return monitor;
-	}
-
+	
 	public TActividad getActividad(){
 		return super.getActividad();
 	}
-	public void setId (int id) {
-		this.id = id;
-	}
-	public int getId () {return this.id;}
+
 	
 	public int getAforo(){
 		return super.getAforo();
@@ -50,9 +54,7 @@ public class SesionCerrada extends Sesion implements InterfazSesion {
 		return super.getHoraInicio();
 	}
 	
-	public void setMonitor(Monitor monitor) {
-		this.monitor = monitor;
-	}
+	 
 
 	public void setActividad(TActividad actividad) {
 		super.setActividad(actividad);

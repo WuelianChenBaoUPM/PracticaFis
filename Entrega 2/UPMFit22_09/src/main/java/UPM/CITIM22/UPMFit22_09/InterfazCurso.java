@@ -41,6 +41,6 @@ public interface InterfazCurso {
 	 */
 	public void setNombre(String nombre);
 
-	public List<SesionCerrada> getListaSesiones();
+	public List<InterfazSesion> getListaSesiones();
 	
 }

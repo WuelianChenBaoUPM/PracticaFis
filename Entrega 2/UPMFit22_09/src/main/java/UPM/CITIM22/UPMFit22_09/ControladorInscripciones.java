@@ -9,6 +9,7 @@ public class ControladorInscripciones {
 	
 	public ControladorInscripciones() {
 		this.inscripciones = new ArrayList<>();
+		view = new ViewInscripciones();
 	}
 	public void inscribirseACurso(String idCliente,String idCurso) {
 		
@@ -17,6 +18,7 @@ public class ControladorInscripciones {
 	
 		InscripcionCurso ins = new InscripcionCurso(cliente.obtenerClientePorId(Integer.parseInt(idCliente))
 				,curso.obtenerCursoPorId(Integer.parseInt(idCurso)));//idCurso
+		ins.setId(inscripciones.size());
 		inscripciones.add(ins);
 	}
 	

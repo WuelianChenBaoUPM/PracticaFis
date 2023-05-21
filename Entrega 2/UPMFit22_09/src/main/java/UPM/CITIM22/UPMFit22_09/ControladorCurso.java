@@ -1,5 +1,6 @@
 package UPM.CITIM22.UPMFit22_09;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -10,11 +11,14 @@ import java.util.List;
 public class ControladorCurso {
 
 	private List<Curso> cursos;
-	
+	private Curso controladorSesiones ;
+
 	public viewCurso viewCurso;
 
 	public ControladorCurso(){
-		//recordar hacer el new  de las listas
+		viewCurso = new viewCurso();
+		controladorSesiones = new Curso();
+		cursos = new ArrayList<>();
 	}
 
 	public void finalize() throws Throwable {
@@ -29,18 +33,22 @@ public class ControladorCurso {
 	}
 	
 	public void verCurso(String id) {
+		
 		int idCurso = Integer.parseInt(id);
 		viewCurso.renderCurso(obtenerCursoPorId(idCurso));
 	}
 	
 	public void altaCurso(String datos) {
-		String info [] = datos.split(",");
+		String info [] = datos.split(";");
+		String infoCurso [] = info[0].split(",");
 		//String fechaInicio, String fechaFin, String horario, String nombre,String sesion1,String sesion2
-		Curso curso = new Curso (info[0],info[1],info[2],info[3],info[4],info[5]);
-		cursos.add(curso);
+		SesionCerrada ses1 = controladorSesiones.crearSesionCerrada(info[1]);
+		SesionCerrada ses2 = controladorSesiones.crearSesionCerrada(info[2]);
+		Curso curso = new Curso (infoCurso[0],infoCurso[1],infoCurso[2],infoCurso[3],ses1,ses2);
+
 		curso.setId(cursos.size());
-		
-	
+		cursos.add(curso);
+		verCurso("0");
 	}
 	
 	public Curso obtenerCursoPorId(int id) {
@@ -70,4 +78,13 @@ public class ControladorCurso {
 	public void removeCurso (Curso curso) {
 		this.cursos.remove(curso);
 	}
+	public Curso getControladorSesiones() {
+		return controladorSesiones;
+	}
+
+	public void setControladorSesiones(Curso controladorSesiones) {
+		this.controladorSesiones = controladorSesiones;
+	}
+
+	
 }//end ControladorCurso

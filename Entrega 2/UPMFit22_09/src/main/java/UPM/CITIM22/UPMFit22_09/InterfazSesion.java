@@ -1,5 +1,7 @@
 package UPM.CITIM22.UPMFit22_09;
 
+import java.util.List;
+
 /**
  * @author The Administrator
  * @version 1.0
@@ -38,6 +40,8 @@ public interface InterfazSesion {
 	 * @param hora
 	 */
 	public void setHoraInicio(String hora);
-
-
+	
+	public int getId();
+	public Monitor getMonitor();
+	
 }

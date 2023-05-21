@@ -19,15 +19,18 @@ public class ViewSesionCerrada {
 	}
 	
 
-	public void renderLisatSesionesCerradas(List<SesionCerrada> sesiones){
+	public void renderLisatSesionesCerradas(List<InterfazSesion> sesiones){
 		for (InterfazSesion sesion : sesiones) {
 			renderSesionCerrada(sesion);
 		}
 	}
-
+	
 	public void renderSesionCerrada(InterfazSesion sesion){
-		
-		System.out.println("Actividad :"+ sesion.getActividad()+ "\nAforo : "+sesion.getAforo()+ "\nHora Inicio : "+ sesion.getHoraInicio()+ "\nHora Fin : "+ sesion.getHoraFin());
+		ViewMonitor viewMonitor = new ViewMonitor();
+		System.out.println("Sesion con Id : "+ sesion.getId());
+		System.out.println("Actividad :"+ sesion.getActividad()+ "\nAforo : "+sesion.getAforo()+ "\nHora Inicio : "
+		+ sesion.getHoraInicio()+ "\nHora Fin : "+ sesion.getHoraFin()+ "\nMonitor que dirige : ");
+		viewMonitor.renderMonitor(sesion.getMonitor());;
 		
 	}
 }//end ViewSesionCerrada

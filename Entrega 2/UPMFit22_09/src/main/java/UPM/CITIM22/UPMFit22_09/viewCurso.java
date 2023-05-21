@@ -19,10 +19,11 @@ public class viewCurso {
 
 	public void renderCurso(InterfazCurso curso){
 		ViewSesionCerrada viewSesionesC = new ViewSesionCerrada();
+		
+	
 		System.out.println("Curso : "+ curso.getNombre() +"\nFecha de Inicio : "+curso.getFechaInicio()+"\nFecha de Fin : "+curso.getFechaFin()+"\nHorario : "+ curso.getHorario());
 		
-		System.out.println("Sesiones que lo componen : ");
-		
+		System.out.println("\nSesiones que lo componen : ");
 		
 		viewSesionesC.renderLisatSesionesCerradas(curso.getListaSesiones());
 		

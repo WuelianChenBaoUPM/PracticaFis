@@ -12,6 +12,19 @@ public class Sesion implements InterfazSesion {
 	private int aforo;
 	private String horaFin;
 	private String horaInicio;
+	private Monitor monitor;
+	private int id;
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public Monitor getMonitor() {
+		return monitor;
+	}
+
+	public void setMonitor(Monitor monitor) {
+		this.monitor = monitor;
+	}
 
 	public Sesion(){
 
@@ -73,6 +86,12 @@ public class Sesion implements InterfazSesion {
 	@Override
 	public void setHoraInicio(String horaInicio){
 		this.horaInicio = horaInicio;
+	}
+
+	@Override
+	public int getId() {
+		// TODO Auto-generated method stub
+		return id;
 	}
 
 	

@@ -12,7 +12,16 @@ public class InscripcionCurso {
 	private Cliente cliente;
 	private Curso curso;
 	private int fechaInscripcion;
+	private int id;
 	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	public InscripcionCurso(){
 
 	}

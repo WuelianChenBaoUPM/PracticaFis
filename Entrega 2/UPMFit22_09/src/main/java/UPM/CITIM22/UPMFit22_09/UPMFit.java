@@ -28,14 +28,15 @@ public class UPMFit {
 		this.controllerCurso =  new ControladorCurso();
 		this.controllerSesiones = new Curso();
 		
+		controllerSesiones.setControladorMonitor(controllerMonitor);
+		controllerCurso.setControladorSesiones(controllerSesiones);
 		
 		//clientes 
-		
 	
 		controllerCliente.altaCliente("20,hombre,80,258258123,x1564564,asdqwe,pepe.fernandez@gmail.com,Pepe,PepeFit");//cliente normal
-		controllerCliente.altaCliente("20,hombre,80,258258123,x1564564,asdqwe,jose.fernandez@alumnos.upm.es,jose,JoseFit,bs012");//estudiante : tiene matricula
-		controllerCliente.altaCliente("20,hombre,80,258258123,x1564564,asdqwe,Rafa.Miñano@profesores.upm.es,Rafael,2"); //empleado :tiene antiguedad y tipo de empleado
-		controllerCliente.verClientes();
+		controllerCliente.altaCliente("18,hombre,80,258258123,x1564564,asdqwe,jose.fernandez@alumnos.upm.es,jose,JoseFit,bs012");//estudiante : tiene matricula
+		controllerCliente.altaCliente("19,hombre,80,258258123,x1564564,asdqwe,Rafa.Miñano@profesores.upm.es,Rafael,2"); //empleado :tiene antiguedad y tipo de empleado
+		//controllerCliente.verClientes();
 		
 		//monitores
 		
@@ -43,20 +44,19 @@ public class UPMFit {
 		controllerMonitor.altaMonitor("895648,70649821H,azul5D,pedrito@upm.es,Pedro,PedroPilates");
 		controllerMonitor.altaMonitor("892248,86588104K,verde3C,monica.perez@upm.es,Monica,MonicaBici");
 		controllerMonitor.altaMonitor("895648,37498210P,amarillo6B,ana_gomez@upm.es,Ana,AnaUPM");
-		controllerMonitor.verMonitores();
+		//controllerMonitor.verMonitores();
 		//sesiones
 		
-		/*
-		SesionCerrada s1 = new SesionCerrada(m1, TActividad.general , 20, "14:00", "15:00");
-		controllerSesiones.getSesiones().add(s1);
-		SesionCerrada s2 = new SesionCerrada(m2, TActividad.gimnasia , 20, "17:00", "18:00");
-		controllerSesiones.getSesiones().add(s2);
-		SesionCerrada s3 = new SesionCerrada(m1, TActividad.bicicleta , 40, "15:00", "16:00");
-		controllerSesiones.getSesiones().add(s3);
-		SesionCerrada s4 = new SesionCerrada(m1, TActividad.baile , 30, "16:00", "17:00");
-		controllerSesiones.getSesiones().add(s4);
-		 */
+		 
+		controllerSesiones.altaSesionCerrada("1,10,15:00,12:00,1");
+		controllerSesiones.altaSesionCerrada("2,20,16:00,15:00,2");
+		controllerSesiones.altaSesionCerrada("3,30,17:30,13:00,0");
+		controllerSesiones.altaSesionCerrada("4,40,15:00,10:00,1");
+		//controllerSesiones.verListaSesiones();
 	 
+		////String fechaInicio, String fechaFin, String horario, String nombre ; String sesion1 ; String sesion2
+		controllerCurso.altaCurso("15-02-2023,15-04-2023,10:00-14:00,Curso1;5,30,15:00,11:00,1;6,30,14:00,12:00,2");
+		
 	}
 
 
