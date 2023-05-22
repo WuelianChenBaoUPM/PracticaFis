@@ -88,8 +88,6 @@ public class Curso implements InterfazCurso {
 	
 	public void altaSesionCerrada(String datos) {
 		SesionCerrada sesion = crearSesionCerrada( datos);
-		sesion.setId(sesiones.size());
-		this.sesiones.add(sesion);
 		
 	}
 	
@@ -120,12 +118,13 @@ public class Curso implements InterfazCurso {
 			actividad = TActividad.relax;
 			break;	
 		}
-		
-		//preguntar si la clase curso puede llamar a la clase ControllerMonitor
 		 
 		Monitor monitor = controladorMonitor.obtenerMonitorPorId(Integer.parseInt(info[4]));
+		SesionCerrada sesion = new SesionCerrada(actividad,Integer.parseInt(info[1]),info[2],info[3],monitor);
+		sesion.setId(sesiones.size());
+		this.sesiones.add(sesion);
 		
-		return new SesionCerrada(actividad,Integer.parseInt(info[1]),info[2],info[3],monitor);
+		return sesion;
 	}
 	 
 	 

@@ -14,6 +14,7 @@ public class Sesion implements InterfazSesion {
 	private String horaInicio;
 	private Monitor monitor;
 	private int id;
+	
 	public void setId(int id) {
 		this.id = id;
 	}
@@ -91,7 +92,7 @@ public class Sesion implements InterfazSesion {
 	@Override
 	public int getId() {
 		// TODO Auto-generated method stub
-		return id;
+		return this.id;
 	}
 
 	

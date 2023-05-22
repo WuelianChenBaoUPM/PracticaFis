@@ -31,6 +31,7 @@ public class UPMFit {
 		this.controllerCurso =  new ControladorCurso();
 		this.controllerSesiones = new Curso();
 		this.controllerInscripcion = new ControladorInscripciones();
+		this.viewSistema = new ViewSistema();
 		controllerSesiones.setControladorMonitor(controllerMonitor);
 		controllerCurso.setControladorSesiones(controllerSesiones);
 		controllerInscripcion.setCliente(controllerCliente);
@@ -65,9 +66,9 @@ public class UPMFit {
 		
 		//inscripciones //idCliente , idCurso , fecha
 		controllerInscripcion.inscribirseACurso("0,0,15-01-2023");
-		controllerInscripcion.inscribirseACurso("1,1,10-01-2013");
-		controllerInscripcion.inscribirseACurso("2,2,05-02-2023");
-		
+		//controllerInscripcion.inscribirseACurso("1,1,10-01-2013");
+		//controllerInscripcion.inscribirseACurso("2,2,05-02-2023");
+		controllerInscripcion.verInscripciones();
 		 
 	}
 
@@ -81,7 +82,7 @@ public class UPMFit {
 	 public static void main( String[] args ){
 		 UPMFit UPMF = new UPMFit();
 		 UPMF.init();
-		 UPMF.start();
+		// UPMF.start();
 		 
 		 
 	 }
@@ -95,21 +96,22 @@ public class UPMFit {
 		switch (opcion) {
 		case 1:
 			viewSistema.opcionAltaCliente();
-			
-			controllerCliente.altaCliente(null);
+			controllerCliente.altaCliente(datos());
 			break;
 		case 2:
-			
-			controllerCurso.altaCurso(null);
+			viewSistema.opcionAltaCurso();
+			controllerCurso.altaCurso(datos());
 			break;
 		case 3:
-			controllerInscripcion.inscribirseACurso(null);
+			viewSistema.opcionInscripcion();
+			controllerInscripcion.inscribirseACurso(datos());
 			break;
 		case 4:
-			controllerCurso.verCurso(null);
+			viewSistema.opcionVerCurso();
+			controllerCurso.verCurso(datos());
 			break;
 
-		default:
+		case 0:
 			break;
 		}
 		
@@ -119,6 +121,11 @@ public class UPMFit {
 		
 	}
 	 
+	 public String datos () {
+		 Scanner sc = new Scanner(System.in);
+		 String info = sc.nextLine();
+		 return info;
+	 }
 	 
 	 
 	 

@@ -66,7 +66,7 @@ public class UsuarioGenerico implements InterfazUsuarioGenerico {
 		if (nombreUsusario == null|| nombreUsusario.isEmpty())
 			throw new RuntimeException("El nombre del usuario tiene que ser un cadena de caracteres no vacia");
 		
-		this.nombreUsuario = nombreUsuario;
+		this.nombreUsuario = nombreUsusario;
 		
 	}
 
