@@ -48,10 +48,10 @@ public class ControladorCurso {
 
 		curso.setId(cursos.size());
 		cursos.add(curso);
-		verCurso("0");
+		
 	}
 	
-	public Curso obtenerCursoPorId(int id) {
+	public Curso  obtenerCursoPorId(int id) {
 		Curso curso = new Curso();
 		for (Curso c : cursos) {
 			if (c.getId() == id )	

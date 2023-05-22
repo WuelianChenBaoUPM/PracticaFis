@@ -13,6 +13,7 @@ public class UPMFit {
 	public ControladorMonitor controllerMonitor;
 	public ControladorCurso controllerCurso;
 	public Curso controllerSesiones;
+	public ControladorInscripciones controllerInscripcion;
 
 	public UPMFit(){
 
@@ -27,9 +28,11 @@ public class UPMFit {
 		this.controllerMonitor = new ControladorMonitor();
 		this.controllerCurso =  new ControladorCurso();
 		this.controllerSesiones = new Curso();
-		
+		this.controllerInscripcion = new ControladorInscripciones();
 		controllerSesiones.setControladorMonitor(controllerMonitor);
 		controllerCurso.setControladorSesiones(controllerSesiones);
+		controllerInscripcion.setCliente(controllerCliente);
+		controllerInscripcion.setCurso(controllerCurso);
 		
 		//clientes 
 	
@@ -54,9 +57,13 @@ public class UPMFit {
 		controllerSesiones.altaSesionCerrada("4,40,15:00,10:00,1");
 		//controllerSesiones.verListaSesiones();
 	 
+		//cursos
 		////String fechaInicio, String fechaFin, String horario, String nombre ; String sesion1 ; String sesion2
 		controllerCurso.altaCurso("15-02-2023,15-04-2023,10:00-14:00,Curso1;5,30,15:00,11:00,1;6,30,14:00,12:00,2");
 		
+		//inscripciones
+		controllerInscripcion.inscribirseACurso("0,0,15-01-2003" );
+		controllerInscripcion.verInscripciones();
 	}
 
 

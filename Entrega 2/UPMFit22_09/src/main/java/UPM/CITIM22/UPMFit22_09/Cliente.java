@@ -1,5 +1,6 @@
 package UPM.CITIM22.UPMFit22_09;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import servidor.Autenticacion;
@@ -62,6 +63,7 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 		this.sexo = sexo;
 		this.peso = peso;
 		this.tarjetaCredito = tarjeta;
+		this.inscripciones= new ArrayList<>(); 
 	}
 
 	/**
@@ -69,6 +71,7 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	 * @param edad
 	 */
 	public void setEdad(int edad){
+		if (edad>0)
 		this.edad = edad;
 	}
 
@@ -77,6 +80,7 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	 * @param peso
 	 */
 	public void setPeso(int peso){
+		if (peso>0)
 		this.peso= peso;
 	}
 
@@ -85,6 +89,7 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	 * @param sexo
 	 */
 	public void setSexo(String sexo){
+		if (sexo != null)
 		this.sexo = sexo;
 	}
 
@@ -93,6 +98,7 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	 * @param tarjeta
 	 */
 	public void setTarjeta(int tarjeta){
+		if (tarjeta >= 0)
 		this.tarjetaCredito = tarjeta;
 	}
 
@@ -114,11 +120,6 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	
 	//metodos de la relacion con Curso-InscripcionCurso
 	
-	public void inscribirseACurso (Curso c) {
-		
-		InscripcionCurso inscripcion = new InscripcionCurso (this,c );
-		addInscripcionCurso(inscripcion);
-	}
 	
 	
 	
@@ -127,7 +128,7 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	}
 		
 	public List<InscripcionCurso> getInscripciones(){
-		return null;
+		return this.inscripciones;
 	}
 		
 	public void addInscripcionCurso(InscripcionCurso inscripcion) {

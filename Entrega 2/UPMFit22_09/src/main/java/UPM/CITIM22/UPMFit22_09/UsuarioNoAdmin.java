@@ -41,6 +41,7 @@ public class UsuarioNoAdmin extends UsuarioGenerico implements InterfazUsNoAdmin
 	 * @param dni
 	 */
 	public void setDni(String dni){
+		if  (dni != null)
 		this.dni = dni;
 	}
 

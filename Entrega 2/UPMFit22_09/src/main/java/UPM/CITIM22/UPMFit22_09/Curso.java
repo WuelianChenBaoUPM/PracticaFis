@@ -31,14 +31,13 @@ public class Curso implements InterfazCurso {
 		this.controladorMonitor = controladorMonitor;
 	}
 
-
 	public Curso(){
 		this.viewSesionCerrada = new ViewSesionCerrada();
 		this.sesiones = new ArrayList<>();
+		this.inscripciones =new ArrayList<>();
 		controladorMonitor =new ControladorMonitor();
 	}
 	
-
 	public void finalize() throws Throwable {
 
 	}
@@ -62,8 +61,6 @@ public class Curso implements InterfazCurso {
 		return this.nombre;
 	}
 
- 
-
 	/**
 	 * 
 	 * @param fechaInicio
@@ -76,6 +73,7 @@ public class Curso implements InterfazCurso {
 
 		this.viewSesionCerrada = new ViewSesionCerrada();
 		this.sesiones = new ArrayList<>();
+		this.inscripciones =new ArrayList<>();
 		this.fechaInicio = fechaInicio;
 		this.fechaFIn = fechaFin;
 		this.horario = horario;
@@ -149,23 +147,6 @@ public class Curso implements InterfazCurso {
 		this.id = id;
 	}
 	public int getId () {return this.id;}
-
-	public void setFechaFin(){
-
-	}
-
-	public void setFechaInicio(){
-
-	}
-
-	public void setHorario(){
-
-	}
-
-	public void setNombre(){
-
-	}
-
 	
 	/**
 	 * 

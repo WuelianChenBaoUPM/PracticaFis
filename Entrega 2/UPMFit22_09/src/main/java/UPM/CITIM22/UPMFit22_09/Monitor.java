@@ -44,7 +44,7 @@ public class Monitor extends UsuarioNoAdmin implements InterfazMonitor {
 	}
 
 	public String getNumeroCuenta(){
-		return "";
+		return this.getNumeroCuenta();
 	}
 
 	/**

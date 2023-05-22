@@ -7,11 +7,11 @@ import java.util.List;
  * @version 1.0
  * @created 28-abr.-2023 0:11:54
  */
-public class InscripcionCurso {
+public class InscripcionCurso implements InterfazInscripcion{
 
 	private Cliente cliente;
 	private Curso curso;
-	private int fechaInscripcion;
+	private String fechaInscripcion;
 	private int id;
 	
 	public int getId() {
@@ -41,21 +41,20 @@ public class InscripcionCurso {
 	 * 
 	 * @param fechaInscripcion
 	 */
-	public InscripcionCurso(int fechaInscripcion){
-		this.fechaInscripcion = fechaInscripcion;
-	}
 
-	public InscripcionCurso(Cliente client , Curso curso){
+	public InscripcionCurso(Cliente client , Curso curso, String fecha ){
 		this.cliente = client;
 		this.curso = curso;
+		this.fechaInscripcion = fecha ;
 		cliente.getInscripciones().add(this);
 		curso.getInscripciones().add(this);
+		
 		
 	}
 	
 	
 	public void setFechaInscripcion(){
-
+		this.fechaInscripcion = fechaInscripcion;
 	}
 	
 	//metodos de la relacion con Curso-Cliente

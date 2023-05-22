@@ -63,7 +63,9 @@ public class UsuarioGenerico implements InterfazUsuarioGenerico {
 
 
 	public void setNombreUsuario(String nombreUsusario){
+		if (nombreUsusario != null)
 		this.nombreUsuario = nombreUsuario;
+		
 	}
 
 	public void logIn(){
@@ -75,6 +77,7 @@ public class UsuarioGenerico implements InterfazUsuarioGenerico {
 	 * @param contrase�a
 	 */
 	public void setContrasena(String contrasena){
+		if(contrasena.length()>=8 && contrasena.length()<=12 )
 		this.contrasena = contrasena;
 	}
 
@@ -83,6 +86,7 @@ public class UsuarioGenerico implements InterfazUsuarioGenerico {
 	 * @param correo
 	 */
 	public void setCorreo(String correo){
+		if (correo != null)
 		this.correoElectronico = correo;
 	}
 
@@ -91,6 +95,7 @@ public class UsuarioGenerico implements InterfazUsuarioGenerico {
 	 * @param nombre
 	 */
 	public void setNombre(String nombre){
+		if (nombre != null)
 		this.nombre = nombre;
 	}
 

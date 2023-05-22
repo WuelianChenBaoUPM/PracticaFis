@@ -6,23 +6,52 @@ import java.util.List;
 public class ControladorInscripciones {
 	private List<InscripcionCurso> inscripciones;
 	private ViewInscripciones view ;
+	ControladorCliente cliente;
+	public ControladorCliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(ControladorCliente cliente) {
+		this.cliente = cliente;
+	}
+
+	public ControladorCurso getCurso() {
+		return curso;
+	}
+
+	public void setCurso(ControladorCurso curso) {
+		this.curso = curso;
+	}
+
+	ControladorCurso curso;
 	
 	public ControladorInscripciones() {
 		this.inscripciones = new ArrayList<>();
-		view = new ViewInscripciones();
+		this.view = new ViewInscripciones();
+		this.cliente = new ControladorCliente();
+		this.curso = new ControladorCurso();
 	}
-	public void inscribirseACurso(String idCliente,String idCurso) {
-		
-		ControladorCliente cliente = new ControladorCliente();
-		ControladorCurso curso = new ControladorCurso();
 	
-		InscripcionCurso ins = new InscripcionCurso(cliente.obtenerClientePorId(Integer.parseInt(idCliente))
-				,curso.obtenerCursoPorId(Integer.parseInt(idCurso)));//idCurso
+	public void inscribirseACurso(String datos) {
+		String info[] = datos.split(",");
+		InscripcionCurso ins = new InscripcionCurso(cliente.obtenerClientePorId(Integer.parseInt(info[0]))
+				,curso.obtenerCursoPorId(Integer.parseInt(info[1])),info[2]);//idCurso
 		ins.setId(inscripciones.size());
 		inscripciones.add(ins);
 	}
-	
-	
+	public void verInscripciones() {
+		view.renderListaInscripcion(convertirLista(inscripciones));
+		
+	}
+	private List<InterfazInscripcion > convertirLista (List<InscripcionCurso> ins){
+		List<InterfazInscripcion > inscripInterfaces = new ArrayList<>();
+		for (InterfazInscripcion i : ins) {
+			inscripInterfaces.add(i);
+	    }
+		
+		
+		return inscripInterfaces;
+	}
 	
 	
 	
