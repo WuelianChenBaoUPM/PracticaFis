@@ -24,10 +24,7 @@ public class ControladorCurso {
 	public void finalize() throws Throwable {
 
 	}
-	public Curso crearCurso(){
-		return null;
-	}
-
+ 
 	public String listaCursos(){
 		return "";
 	}

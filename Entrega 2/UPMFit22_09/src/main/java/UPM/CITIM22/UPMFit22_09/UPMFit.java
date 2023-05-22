@@ -1,5 +1,7 @@
 package UPM.CITIM22.UPMFit22_09;
 
+import java.util.Scanner;
+
 /**
  * @author The Administrator
  * @version 1.0
@@ -7,7 +9,7 @@ package UPM.CITIM22.UPMFit22_09;
  */
 public class UPMFit {
 
-
+	public ViewSistema viewSistema;
 	public ControladorAdmin controllerAdmin;
 	public ControladorCliente controllerCliente;
 	public ControladorMonitor controllerMonitor;
@@ -61,14 +63,18 @@ public class UPMFit {
 		////String fechaInicio, String fechaFin, String horario, String nombre ; String sesion1 ; String sesion2
 		controllerCurso.altaCurso("15-02-2023,15-04-2023,10:00-14:00,Curso1;5,30,15:00,11:00,1;6,30,14:00,12:00,2");
 		
-		//inscripciones
-		controllerInscripcion.inscribirseACurso("0,0,15-01-2003");
-		controllerInscripcion.verInscripciones();
+		//inscripciones //idCliente , idCurso , fecha
+		controllerInscripcion.inscribirseACurso("0,0,15-01-2023");
+		controllerInscripcion.inscribirseACurso("1,1,10-01-2013");
+		controllerInscripcion.inscribirseACurso("2,2,05-02-2023");
+		
+		 
 	}
 
 
-	public String operate(){ //el menu de las operaciones que queremos hacer (recordar hacer una vista)
-		return "";
+	public void menu(){ //el menu de las operaciones que queremos hacer (recordar hacer una vista)
+		
+		
 	}
 	
 	
@@ -81,7 +87,34 @@ public class UPMFit {
 	 }
 
 	private void start() { 
+		int opcion ; 
+		Scanner sc = new Scanner(System.in);
+		do {
+			viewSistema.menu();
+		opcion = sc.nextInt();	
+		switch (opcion) {
+		case 1:
+			viewSistema.opcionAltaCliente();
+			
+			controllerCliente.altaCliente(null);
+			break;
+		case 2:
+			
+			controllerCurso.altaCurso(null);
+			break;
+		case 3:
+			controllerInscripcion.inscribirseACurso(null);
+			break;
+		case 4:
+			controllerCurso.verCurso(null);
+			break;
 
+		default:
+			break;
+		}
+		
+		}
+		while (opcion !=0);
 	// controllerCliente.altaCliente();
 		
 	}
