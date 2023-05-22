@@ -33,6 +33,8 @@ public class viewCurso {
 
 	}
 	
-
+	public void printException (RuntimeException e) {
+		System.out.println(e.getMessage());
+	}
 	
 }//end viewCurso

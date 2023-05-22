@@ -9,8 +9,8 @@ public class Estudiante  extends Cliente {
 			String correo, String nombre, String nombreUsuario,String matricula) {
 		super(edad,sexo,peso,tarjeta,dni,contrasena,correo,nombre,nombreUsuario);
 		this.descuento = (float) 0.5;
-		this.matricula = matricula;
-		
+
+		setMatricula(matricula);
 	}
 	
 	public float getDescuento() {
@@ -19,6 +19,8 @@ public class Estudiante  extends Cliente {
 	
 	public void setMatricula (String matricula) 
 	{
+		if(matricula == null || matricula.isEmpty())
+			throw new RuntimeException("La matricula tiene que ser un cadena de caracteres no vacia");
 		this.matricula = matricula;
 	}
 	public String getMatricula () 

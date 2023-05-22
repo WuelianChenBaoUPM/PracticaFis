@@ -48,12 +48,10 @@ public class InscripcionCurso implements InterfazInscripcion{
 		this.fechaInscripcion = fecha ;
 		cliente.getInscripciones().add(this);
 		curso.getInscripciones().add(this);
-		
-		
 	}
 	
 	
-	public void setFechaInscripcion(){
+	public void setFechaInscripcion(String fechaInscripcion){
 		this.fechaInscripcion = fechaInscripcion;
 	}
 	
@@ -74,6 +72,7 @@ public class InscripcionCurso implements InterfazInscripcion{
 	public Cliente getCliente(){
 		return cliente;
 	}
+
 			
 	
 }//end InscripcionCurso

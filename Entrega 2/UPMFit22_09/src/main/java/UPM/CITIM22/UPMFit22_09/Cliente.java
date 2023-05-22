@@ -3,6 +3,8 @@ package UPM.CITIM22.UPMFit22_09;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.management.RuntimeErrorException;
+
 import servidor.Autenticacion;
 import servidor.UPMUsers;
 
@@ -59,11 +61,11 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	public Cliente(int edad, String sexo, int peso, int tarjeta, String dni, String contrasena, String correo,
 			String nombre, String nombreUsuario){
 		super (dni,contrasena , correo, nombre,nombreUsuario);
-		this.edad = edad;
-		this.sexo = sexo;
-		this.peso = peso;
-		this.tarjetaCredito = tarjeta;
 		this.inscripciones= new ArrayList<>(); 
+		setEdad(edad);
+		setSexo(sexo);
+		setPeso(peso);
+		setTarjeta(tarjeta);
 	}
 
 	/**
@@ -71,7 +73,8 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	 * @param edad
 	 */
 	public void setEdad(int edad){
-		if (edad>0)
+		if (edad<=0)
+			throw new RuntimeException("La edad debe de ser positiva");
 		this.edad = edad;
 	}
 
@@ -80,7 +83,8 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	 * @param peso
 	 */
 	public void setPeso(int peso){
-		if (peso>0)
+		if (peso<0)
+			throw new RuntimeException("El peso debe de ser positivo");
 		this.peso= peso;
 	}
 
@@ -89,7 +93,8 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	 * @param sexo
 	 */
 	public void setSexo(String sexo){
-		if (sexo != null)
+		if (sexo == null ||sexo.isEmpty())
+			throw new RuntimeException("El sexo tiene que ser un cadena de caracteres no vacia");
 		this.sexo = sexo;
 	}
 
@@ -98,7 +103,8 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	 * @param tarjeta
 	 */
 	public void setTarjeta(int tarjeta){
-		if (tarjeta >= 0)
+		if (tarjeta <= 0)
+			throw new RuntimeException("La tarjeta deben de ser numeros positivos");
 		this.tarjetaCredito = tarjeta;
 	}
 
@@ -120,12 +126,6 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	
 	//metodos de la relacion con Curso-InscripcionCurso
 	
-	
-	
-	
-	public void setInscripciones(List<InscripcionCurso> inscripciones)  {
-			
-	}
 		
 	public List<InscripcionCurso> getInscripciones(){
 		return this.inscripciones;
@@ -135,10 +135,7 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 			this.inscripciones.add(inscripcion);
 	}
 		
-	public void removeInscripcionCurso (InscripcionCurso inscripcion) {
-			
-	}
-
+	
 
 
 

@@ -12,10 +12,9 @@ public class Personal extends Cliente{
 			String correo, String nombre, String nombreUsuario,int antiguedad) {
 		super(edad,sexo,peso,tarjeta,dni,contrasena,correo,nombre,nombreUsuario);
 		
-		this.antiguedad = antiguedad;
-		this.descuento = (float) 0.25+ calcularDesc(antiguedad);
 		this.tipoEmpleado = ObtencionDeRol.get_UPM_AccountRol(correo);
-		
+		setAntiguedad(antiguedad);
+		setDescuento(antiguedad);
 	}
 	
 	private float calcularDesc(int antiguedad) {
@@ -34,13 +33,16 @@ public class Personal extends Cliente{
 	}
 	
 	public void setAntiguedad(int antiguedad) {
+		if(antiguedad <0 )
+			throw new RuntimeException("La antiguedad tiene que ser un numero positivo");
 		this.antiguedad = antiguedad;
 	}
 	public void setTipoEmpleado(UPMUsers tipoEmpleado) {
 		this.tipoEmpleado = tipoEmpleado;
 	}
-	public void setDescuento(float descuento) {
-		this.descuento = descuento;
+	public void setDescuento(int antiguedad) {
+		
+		this.descuento = (float) 0.25+ calcularDesc(antiguedad);
 	}
 	
 	

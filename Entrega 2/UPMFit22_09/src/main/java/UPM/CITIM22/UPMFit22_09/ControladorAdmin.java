@@ -11,9 +11,8 @@ public class ControladorAdmin {
 	
 	private List<Administrador> admins;
 
-	public viewAdministrador m_viewAdministrador;
-	public Administrador m_Administrador;
-
+	public viewAdministrador viewAdministrador;
+	
 	public ControladorAdmin(){
 
 	}
@@ -21,12 +20,17 @@ public class ControladorAdmin {
 	public void finalize() throws Throwable {
 
 	}
-	public Administrador crearAdmin(){
-		return null;
-	}
-
-	public int getTelefono(){
-		return 0;
+ 
+	public void crearAdmin(String datos) {
+		String [] info = datos.split(",");
+		 try {
+			 Administrador admin = new Administrador(Integer.parseInt(info[0]),info[1],info[2],info[3],info[4]);
+			 admins.add(admin);
+		 } catch (RuntimeException e) {
+				viewAdministrador.printException(e);
+			}
+		
+		
 	}
 
 	public String listaAdmins(){

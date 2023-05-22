@@ -13,7 +13,7 @@ public class UsuarioNoAdmin extends UsuarioGenerico implements InterfazUsNoAdmin
 	public UsuarioNoAdmin(String dni, String contrasena, String correoElectronico, String nombre, String nombreUsuario){
 		
 		super(contrasena, correoElectronico, nombre, nombreUsuario);
-		this.dni = dni;
+		this.setDni(dni);
 	}
 
 	public void finalize() throws Throwable {
@@ -41,7 +41,8 @@ public class UsuarioNoAdmin extends UsuarioGenerico implements InterfazUsNoAdmin
 	 * @param dni
 	 */
 	public void setDni(String dni){
-		if  (dni != null)
+		if  (dni == null||dni.isEmpty())
+			throw new RuntimeException("El dni tiene que ser un cadena de caracteres no vacia");
 		this.dni = dni;
 	}
 

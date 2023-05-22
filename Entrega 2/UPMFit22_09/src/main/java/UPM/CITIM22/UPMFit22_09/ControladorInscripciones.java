@@ -33,11 +33,16 @@ public class ControladorInscripciones {
 	}
 	
 	public void inscribirseACurso(String datos) {
+		try {
+				
 		String info[] = datos.split(",");
 		InscripcionCurso ins = new InscripcionCurso(cliente.obtenerClientePorId(Integer.parseInt(info[0]))
 				,curso.obtenerCursoPorId(Integer.parseInt(info[1])),info[2]);//idCurso
 		ins.setId(inscripciones.size());
 		inscripciones.add(ins);
+			}catch(RuntimeException e) {
+				view.printException(e);}
+	
 	}
 	public void verInscripciones() {
 		view.renderListaInscripcion(convertirLista(inscripciones));

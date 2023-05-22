@@ -38,19 +38,10 @@ public class ViiewCliente {
 		}
 		
 	}
-	
 
-	
-	public void  formAltaCliente() {
-		
-		//int edad, String sexo, double peso, int tarjeta, String dni, String contrasena, String correo, String nombre, String nombreUsuario
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Escriba los datos del nuevo cliente de la forma +"
-				+ "\n'edad,sexo,peso,tarjeta,dni,contrasena,correo,nombre,nombreUsuario'");
-		String datos = sc.nextLine();
-		
+	public void printException (RuntimeException e) {
+		System.out.println(e.getMessage());
 	}
-	
 
 	
 }//end ViiewCliente

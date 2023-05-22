@@ -39,6 +39,7 @@ public class ControladorCurso {
 	}
 	
 	public void altaCurso(String datos) {
+		try {
 		String info [] = datos.split(";");
 		String infoCurso [] = info[0].split(",");
 		//String fechaInicio, String fechaFin, String horario, String nombre,String sesion1,String sesion2
@@ -48,7 +49,9 @@ public class ControladorCurso {
 
 		curso.setId(cursos.size());
 		cursos.add(curso);
-		
+		}catch(RuntimeException e) {
+			viewCurso.printException(e);
+		}
 	}
 	
 	public Curso  obtenerCursoPorId(int id) {

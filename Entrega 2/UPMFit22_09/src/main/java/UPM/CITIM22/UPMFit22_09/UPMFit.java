@@ -62,7 +62,7 @@ public class UPMFit {
 		controllerCurso.altaCurso("15-02-2023,15-04-2023,10:00-14:00,Curso1;5,30,15:00,11:00,1;6,30,14:00,12:00,2");
 		
 		//inscripciones
-		controllerInscripcion.inscribirseACurso("0,0,15-01-2003" );
+		controllerInscripcion.inscribirseACurso("0,0,15-01-2003");
 		controllerInscripcion.verInscripciones();
 	}
 

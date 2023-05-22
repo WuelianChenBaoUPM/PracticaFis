@@ -17,6 +17,6 @@ public interface InterfazMonitor extends  InterfazUsNoAdmin{
 	 * 
 	 * @param numCuenta
 	 */
-	public void setNumeroCuenta(String numCuenta);
+	public void setNumeroCuenta(double numCuenta);
 
 }

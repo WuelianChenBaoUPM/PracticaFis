@@ -18,7 +18,6 @@ public class ViewSesionCerrada {
 
 	}
 	
-
 	public void renderLisatSesionesCerradas(List<InterfazSesion> sesiones){
 		for (InterfazSesion sesion : sesiones) {
 			renderSesionCerrada(sesion);
@@ -32,5 +31,8 @@ public class ViewSesionCerrada {
 		+ sesion.getHoraInicio()+ "\nHora Fin : "+ sesion.getHoraFin()+ "\nMonitor que dirige : ");
 		viewMonitor.renderMonitor(sesion.getMonitor());;
 		
+	}
+	public void printException (RuntimeException e) {
+		System.out.println(e.getMessage());
 	}
 }//end ViewSesionCerrada

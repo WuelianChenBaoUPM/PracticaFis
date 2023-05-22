@@ -6,7 +6,7 @@ public interface InterfazInscripcion {
 	public void setId(int id) ;
 	
 	public int getFechaIns() ;
-	public void setFechaInscripcion();
+	public void setFechaInscripcion(String fecha);
 	
 	 
 	public void setCurso(Curso curso) ;

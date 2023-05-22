@@ -26,8 +26,7 @@ public class Monitor extends UsuarioNoAdmin implements InterfazMonitor {
 	public Monitor(double numeroDeCuenta, String dni, String contrasena, String correoElectronico, String nombre, String nombreUsuario){
 		
 			super(dni, contrasena, correoElectronico, nombre, nombreUsuario);
-			this.numeroDeCuenta = numeroDeCuenta;
-	
+			this.setNumeroCuenta(numeroDeCuenta);
 	
 	}
 
@@ -57,17 +56,18 @@ public class Monitor extends UsuarioNoAdmin implements InterfazMonitor {
 	 * @param nombreUsuario
 	 */
 	
-	public void setNumeroCuenta(int numeroCuenta){
-
+	public void setNumeroCuenta(double numeroCuenta){
+		if(numeroCuenta < 0 )
+			throw new RuntimeException("El numero de cuenta debe de ser positivo");
+		
+		this.numeroDeCuenta = numeroDeCuenta;
 	}
 
 	/**
 	 * 
 	 * @param numCuenta
 	 */
-	public void setNumeroCuenta(String numCuenta){
-
-	}
+	 
 	
 	//metodos de la relacion con SesionCerrada
 	

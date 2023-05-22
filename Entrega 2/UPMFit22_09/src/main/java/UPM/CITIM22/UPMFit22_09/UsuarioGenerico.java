@@ -14,10 +14,10 @@ public class UsuarioGenerico implements InterfazUsuarioGenerico {
 
 	public UsuarioGenerico() {}
 	public UsuarioGenerico(String contrasena, String correoElectronico, String nombre, String nombreUsuario){
-		this.contrasena = contrasena;
-		this.correoElectronico = correoElectronico;
-		this.nombre = nombre;
-		this.nombreUsuario = nombreUsuario;
+		this.setContrasena(contrasena);
+		this.setCorreo(correoElectronico);
+		this.setNombre(nombre);
+		this.setNombreUsuario(nombreUsuario);
 	}
 	
 	public String getContrasena() {
@@ -63,7 +63,9 @@ public class UsuarioGenerico implements InterfazUsuarioGenerico {
 
 
 	public void setNombreUsuario(String nombreUsusario){
-		if (nombreUsusario != null)
+		if (nombreUsusario == null|| nombreUsusario.isEmpty())
+			throw new RuntimeException("El nombre del usuario tiene que ser un cadena de caracteres no vacia");
+		
 		this.nombreUsuario = nombreUsuario;
 		
 	}
@@ -77,7 +79,8 @@ public class UsuarioGenerico implements InterfazUsuarioGenerico {
 	 * @param contrase�a
 	 */
 	public void setContrasena(String contrasena){
-		if(contrasena.length()>=8 && contrasena.length()<=12 )
+		if(contrasena.length()<8 && contrasena.length()>12 )
+			throw new RuntimeException("La contrasena tiene que tener una longitud entre 8 y 12");
 		this.contrasena = contrasena;
 	}
 
@@ -86,7 +89,9 @@ public class UsuarioGenerico implements InterfazUsuarioGenerico {
 	 * @param correo
 	 */
 	public void setCorreo(String correo){
-		if (correo != null)
+		if (correo == null ||correo.isEmpty())
+			throw new RuntimeException("El correo tiene que ser un cadena de caracteres no vacia");
+		
 		this.correoElectronico = correo;
 	}
 
@@ -95,7 +100,8 @@ public class UsuarioGenerico implements InterfazUsuarioGenerico {
 	 * @param nombre
 	 */
 	public void setNombre(String nombre){
-		if (nombre != null)
+		if (nombre == null||nombre.isEmpty())
+			throw new RuntimeException("El nombre tiene que ser un cadena de caracteres no vacia");
 		this.nombre = nombre;
 	}
 

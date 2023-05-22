@@ -30,4 +30,7 @@ public class ViewInscripciones {
 		}
 		
 	}
+	public void printException (RuntimeException e) {
+		System.out.println(e.getMessage());
+	}
 }

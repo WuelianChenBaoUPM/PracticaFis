@@ -43,7 +43,7 @@ public class ControladorCliente {
 	
 	
 	public void altaCliente(String datos) {
-		
+		try {
 		String info[] = datos.split(",");
 		
 		if (validacion(info[6])) {// comprueba si es de la UPM
@@ -61,21 +61,21 @@ public class ControladorCliente {
 			c.setId(clientes.size());
 			clientes.add(c);
 		}
+		}catch (RuntimeException e) {
+			ViewCliente.printException(e);
+		}
 	
 	}
 	
 	
-	private Cliente creaCliente(String[] info) {
-		
-		
+	private Cliente creaCliente(String[] info) {	
 		String contrasenia = cifradoUPM(info[5]);
 		
 		return 	new Cliente (Integer.parseInt(info[0]),info[1],Integer.parseInt(info[2]),Integer.parseInt(info[3]),info[4],info[5],info[6],info[7],info[8]);
 	}
 	
 	
-	private Cliente creaClienteInterno(String[] info,UPMUsers rol) {
-		
+	private Cliente creaClienteInterno(String[] info,UPMUsers rol) {	
 		if (rol == UPMUsers.ALUMNO) {
 			Estudiante c = new Estudiante(Integer.parseInt(info[0]),info[1],Integer.parseInt(info[2]),Integer.parseInt(info[3]),
 					info[4],info[5],info[6],info[7],info[8],info[9]); 

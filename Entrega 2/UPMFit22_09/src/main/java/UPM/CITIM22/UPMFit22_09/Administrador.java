@@ -7,13 +7,13 @@ package UPM.CITIM22.UPMFit22_09;
  */
 public class Administrador extends UsuarioGenerico implements InterfazAdministrador  {
 
-	private double numeroDeTelefono;	
+	private int numeroDeTelefono;	
 	
-	public Administrador(double numeroTelf, String contrasena, String correoElectronico, String nombre, String nombreUsuario){
+	public Administrador(int numeroTelf, String contrasena, String correoElectronico, String nombre, String nombreUsuario){
 		super (contrasena,correoElectronico,nombre,nombreUsuario);
 		this.numeroDeTelefono = numeroTelf;
 	} 
-
+	
 	/**
 	 * 
 	 * @param numeroTelefono
@@ -27,7 +27,7 @@ public class Administrador extends UsuarioGenerico implements InterfazAdministra
 
 	}
 
-	public double getTelefono(){
+	public int getTelefono(){
 		return this.numeroDeTelefono;
 	}
 
@@ -43,16 +43,13 @@ public class Administrador extends UsuarioGenerico implements InterfazAdministra
 	 
 
 	@Override
-	public void setNumTelefono(double numTelefono) {
-		// TODO Auto-generated method stub
+	public void setNumTelefono(int numTelefono) {
+		 if(numTelefono<0 )
+			 throw new RuntimeException("el numero de telf tiene que ser un num positivo");
 		this.numeroDeTelefono = numTelefono;
 	}
 
-	@Override
-	public Monitor altaMonitor(double numeroDeCuenta, String dni, String contrasena, String correoElectronico, String nombre, String nombreUsuario) {
-		// TODO Auto-generated method stub
-		return new Monitor(numeroDeCuenta, dni, contrasena, correoElectronico, nombre, nombreUsuario);
-	}
+	 
 
 	/**
 	 * 
