@@ -4,7 +4,8 @@ public class ViewSistema {
 
 	public void menu() {
 		System.out.println("¿Qué operacion quiere realizar?");
-		System.out.println("1. Alta de un Cliente \n2. Alta de un Curso \n3. Inscripcion de un cliente a un curso \n4. Ver la informacion de un curso");
+		System.out.println("1. Alta de un Cliente \n2. Alta de un Curso "
+				+ "\n3. Inscripcion de un cliente a un curso \n4. Ver la informacion de un curso\n0. Salir");
 	}
 	public void opcionAltaCliente() {
 		System.out.println("Ha elegido crear un Cliente , introduzca sus datos de la forma 'edad,sexo,peso,tarjeta,dni,contrasena,correo,nombre, nombreUsuario'");

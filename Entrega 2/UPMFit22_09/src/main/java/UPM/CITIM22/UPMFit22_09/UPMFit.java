@@ -68,7 +68,7 @@ public class UPMFit {
 		controllerInscripcion.inscribirseACurso("0,0,15-01-2023");
 		//controllerInscripcion.inscribirseACurso("1,1,10-01-2013");
 		//controllerInscripcion.inscribirseACurso("2,2,05-02-2023");
-		controllerInscripcion.verInscripciones();
+		//controllerInscripcion.verInscripciones();
 		 
 	}
 
@@ -82,7 +82,7 @@ public class UPMFit {
 	 public static void main( String[] args ){
 		 UPMFit UPMF = new UPMFit();
 		 UPMF.init();
-		// UPMF.start();
+		 UPMF.start();
 		 
 		 
 	 }
