@@ -19,9 +19,7 @@ public class SesionCerrada extends Sesion implements InterfazSesion {
 		this.monitor = monitor;
 	}
 
-	public SesionCerrada(){
-
-	}
+	 
 
 	public SesionCerrada(TActividad actividad, int aforo, String horaFin, String horaInicio,Monitor monitor ){
 		
@@ -36,36 +34,8 @@ public class SesionCerrada extends Sesion implements InterfazSesion {
 
 	}
 	
-	
-	public TActividad getActividad(){
-		return super.getActividad();
-	}
-
-	
-	public int getAforo(){
-		return super.getAforo();
-	}
-
-	public String getHoraFin(){
-		return super.getHoraFin();
-	}
-
-	public String getHoraInicio(){
-		return super.getHoraInicio();
-	}
+	 
 	
 	 
-
-	public void setActividad(TActividad actividad) {
-		super.setActividad(actividad);
-	}
-	/**
-	 * 
-	 * @param actividad
-	 * @param aforo
-	 * @param horaFin
-	 * @param horaIncio
-	 */
-	
 
 }//end SesionCerrada

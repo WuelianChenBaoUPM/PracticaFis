@@ -14,6 +14,9 @@ public class Curso implements InterfazCurso {
 	private List<InscripcionCurso> inscripciones;
 	private List<SesionCerrada> sesiones;
 	private String fechaFIn;
+	
+
+
 	private String fechaInicio;
 	private String horario;
 	private String nombre;
@@ -86,12 +89,8 @@ public class Curso implements InterfazCurso {
 		
 	}
 	
-	public void altaSesionCerrada(String datos) {
-		SesionCerrada sesion = crearSesionCerrada( datos);
-		
-	}
-	
-	 public SesionCerrada crearSesionCerrada(String datos) {
+	 
+	 public SesionCerrada altaSesionCerrada(String datos) {
 		
 		String []info = datos.split(",");
 		//TActividad actividad, int aforo, String horaFin, String horaInicio,Monitor monitor
@@ -136,7 +135,19 @@ public class Curso implements InterfazCurso {
 		    return sesionesInterfaz ;
 	}
 	
+ 
 	 
+		public void setFechaInicio(String fechaInicio) {
+			this.fechaInicio = fechaInicio;
+		}
+
+		public void setHorario(String horario) {
+			this.horario = horario;
+		}
+
+		public void setNombre(String nombre) {
+			this.nombre = nombre;
+		}
 	public void verListaSesiones() {
 		
 		viewSesionCerrada.renderLisatSesionesCerradas(getListaSesiones());
@@ -147,37 +158,7 @@ public class Curso implements InterfazCurso {
 	}
 	public int getId () {return this.id;}
 	
-	/**
-	 * 
-	 * @param fecha
-	 */
-	public void setFechaFin(String fecha){
-
-	}
-
-	/**
-	 * 
-	 * @param fecha
-	 */
-	public void setFechaInicio(String fecha){
-
-	}
-
-	/**
-	 * 
-	 * @param horario
-	 */
-	public void setHorario(String horario){
-
-	}
-
-	/**
-	 * 
-	 * @param nombre
-	 */
-	public void setNombre(String nombre){
-
-	}
+	 
 	
 	//metodos de la relacion con SesionCerrada
 	
@@ -205,6 +186,12 @@ public class Curso implements InterfazCurso {
 	public List<InterfazSesion> getListaSesiones() {
 		 
 		return convertirLista();
+	}
+
+	@Override
+	public void setFechaFin(String fecha) {
+		this.fechaFIn = fecha;
+		
 	}
 			
 	

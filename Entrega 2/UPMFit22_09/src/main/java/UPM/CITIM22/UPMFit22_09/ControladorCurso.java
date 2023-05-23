@@ -12,7 +12,6 @@ public class ControladorCurso {
 
 	private List<Curso> cursos;
 	private Curso controladorSesiones ;
-
 	public viewCurso viewCurso;
 
 	public ControladorCurso(){
@@ -24,11 +23,7 @@ public class ControladorCurso {
 	public void finalize() throws Throwable {
 
 	}
- 
-	public String listaCursos(){
-		return "";
-	}
-	
+  
 	public void verCurso(String id) {
 		
 		int idCurso = Integer.parseInt(id);
@@ -40,8 +35,8 @@ public class ControladorCurso {
 		String info [] = datos.split(";");
 		String infoCurso [] = info[0].split(",");
 		//String fechaInicio, String fechaFin, String horario, String nombre,String sesion1,String sesion2
-		SesionCerrada ses1 = controladorSesiones.crearSesionCerrada(info[1]);
-		SesionCerrada ses2 = controladorSesiones.crearSesionCerrada(info[2]);
+		SesionCerrada ses1 = controladorSesiones.altaSesionCerrada(info[1]);
+		SesionCerrada ses2 = controladorSesiones.altaSesionCerrada(info[2]);
 		Curso curso = new Curso (infoCurso[0],infoCurso[1],infoCurso[2],infoCurso[3],ses1,ses2);
 
 		curso.setId(cursos.size());

@@ -27,9 +27,7 @@ public class Sesion implements InterfazSesion {
 		this.monitor = monitor;
 	}
 
-	public Sesion(){
-
-	}
+	 
 
 	public void finalize() throws Throwable {
 

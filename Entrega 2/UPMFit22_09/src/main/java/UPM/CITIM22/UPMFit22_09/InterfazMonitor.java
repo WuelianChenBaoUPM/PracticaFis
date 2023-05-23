@@ -9,7 +9,7 @@ package UPM.CITIM22.UPMFit22_09;
  */
 public interface InterfazMonitor extends  InterfazUsNoAdmin{
 
-	public void cobrar();
+	 
 
 	public String getNumeroCuenta();
 

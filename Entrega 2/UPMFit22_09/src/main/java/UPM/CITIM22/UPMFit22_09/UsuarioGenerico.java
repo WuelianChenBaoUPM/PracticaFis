@@ -44,10 +44,7 @@ public class UsuarioGenerico implements InterfazUsuarioGenerico {
 		return this.nombreUsuario;
 	}
 
-	public void login(){
-
-	}
-
+	 
 	public void logOut(){
 
 	}
@@ -69,11 +66,7 @@ public class UsuarioGenerico implements InterfazUsuarioGenerico {
 		this.nombreUsuario = nombreUsusario;
 		
 	}
-
-	public void logIn(){
-
-	}
-
+ 
 	/**
 	 * 
 	 * @param contrase�a
@@ -103,6 +96,11 @@ public class UsuarioGenerico implements InterfazUsuarioGenerico {
 		if (nombre == null||nombre.isEmpty())
 			throw new RuntimeException("El nombre tiene que ser un cadena de caracteres no vacia");
 		this.nombre = nombre;
+	}
+	@Override
+	public void logIn() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

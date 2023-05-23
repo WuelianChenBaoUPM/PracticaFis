@@ -3,7 +3,7 @@ package UPM.CITIM22.UPMFit22_09;
 import servidor.ObtencionDeRol;
 import servidor.UPMUsers;
 
-public class Personal extends Cliente{
+public class Personal extends Cliente implements InterfazPersonal{
 	private UPMUsers tipoEmpleado;
 	private int antiguedad;
 	private float descuento;

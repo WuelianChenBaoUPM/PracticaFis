@@ -33,9 +33,8 @@ public class ControladorAdmin {
 		
 	}
 
-	public String listaAdmins(){
-		return "";
-	}
+	 
+	 
 	//metodos relacion con Admin
 	
 		public void setAdmin(List<Administrador> admins)  {
@@ -43,7 +42,7 @@ public class ControladorAdmin {
 		}
 		
 		public List<Administrador> getAdmin(){
-			return null;
+			return this.admins;
 		}
 		
 		public void addAdmin(Administrador admin) {

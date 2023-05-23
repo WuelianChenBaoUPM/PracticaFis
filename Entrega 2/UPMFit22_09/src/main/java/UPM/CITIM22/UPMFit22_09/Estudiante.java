@@ -1,8 +1,9 @@
 package UPM.CITIM22.UPMFit22_09;
 
-public class Estudiante  extends Cliente {
+public class Estudiante  extends Cliente implements InterfazEstudiante{
 
 	private float descuento; 
+	
 	private String matricula;
 	
 	public Estudiante (int edad, String sexo, int peso, int tarjeta, String dni, String contrasena, 
@@ -16,7 +17,9 @@ public class Estudiante  extends Cliente {
 	public float getDescuento() {
 		return this.descuento;
 	}	
-	
+	public void setDescuento() {
+		this.descuento =(float)0.5;
+	}
 	public void setMatricula (String matricula) 
 	{
 		if(matricula == null || matricula.isEmpty())

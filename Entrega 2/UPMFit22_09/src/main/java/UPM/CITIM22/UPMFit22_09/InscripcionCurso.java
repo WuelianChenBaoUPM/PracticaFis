@@ -51,6 +51,10 @@ public class InscripcionCurso implements InterfazInscripcion{
 	}
 	
 	
+	public String getFechaInscripcion() {
+		return fechaInscripcion;
+	}
+
 	public void setFechaInscripcion(String fechaInscripcion){
 		this.fechaInscripcion = fechaInscripcion;
 	}

@@ -127,12 +127,7 @@ public class ControladorCliente {
 		return cliente; 
 	}
 	
-
-
-	public String listaClientes(){
-		return "";
-	}
-	
+ 
 	//metodos de la relacion con cliente
 	
 		public void setCliente(List<Cliente> clientes)  {
