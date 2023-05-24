@@ -26,119 +26,66 @@ public class ClienteTest {
 	public void tearDown() throws Exception {
 	}
 
-	@Test
+	/*@Test
 	public void testCliente() {
 		fail("Not yet implemented");
-	}
+	}*/
 
 	@Test
 	public void testClienteIntStringIntIntStringStringStringStringString() {
-		fail("Not yet implemented");
+		Cliente cliente = new Cliente(18, "hombre", 70, 5940, "57235901D", "password", "pepe@upm.es", "Pepe", "PepeUPM" );
+		
+		assertEquals(18, cliente.getEdad());
+		assertEquals("hombre", cliente.getSexo());
+		assertEquals(70, cliente.getPeso());
+		assertEquals(5940, cliente.getTarjeta());
+		assertEquals("57235901D", cliente.getDni());
+		assertEquals("password", cliente.getContrasena());
+		assertEquals("pepe@upm.es", cliente.getCorreo());
+		assertEquals("Pepe", cliente.getNombre());
+		assertEquals("PepeUPM", cliente.getNombreUsuario());
+		
 	}
 
 	@Test
 	public void testSetEdad() {
-		fail("Not yet implemented");
+		Cliente cliente = new Cliente();
+		cliente.setEdad(18);
+		assertEquals(18, cliente.getEdad());
+		
 	}
 
 	@Test
 	public void testSetPeso() {
-		fail("Not yet implemented");
+		Cliente cliente = new Cliente();
+		cliente.setPeso(70);
+		assertEquals(70, cliente.getPeso());
 	}
 
 	@Test
 	public void testSetSexo() {
-		fail("Not yet implemented");
+		Cliente cliente = new Cliente();
+		cliente.setSexo("hombre");
+		assertEquals("hombre", cliente.getSexo());
 	}
 
 	@Test
 	public void testSetTarjeta() {
-		fail("Not yet implemented");
+		Cliente cliente = new Cliente();
+		cliente.setTarjeta(5940);
+		assertEquals(5940, cliente.getTarjeta());
 	}
 
 	@Test
 	public void testSetId() {
-		fail("Not yet implemented");
+		Cliente cliente = new Cliente();
+		cliente.setId(100);
+		assertEquals(100, cliente.getId());
 	}
 
-	@Test
-	public void testInscribirseACurso() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testSetInscripciones() {
-		fail("Not yet implemented");
-	}
-
-	@Test
+	/*@Test
 	public void testAddInscripcionCurso() {
 		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testRemoveInscripcionCurso() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testUsuarioNoAdmin() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testUsuarioNoAdminStringStringStringStringString() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testSetDni() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testUsuarioGenerico() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testUsuarioGenericoStringStringStringString() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testLogin() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testLogOut() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testSetNombreUsuario() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testLogIn() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testSetContrasena() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testSetCorreo() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testSetNombre() {
-		fail("Not yet implemented");
-	}
+	}*/
 
 }
