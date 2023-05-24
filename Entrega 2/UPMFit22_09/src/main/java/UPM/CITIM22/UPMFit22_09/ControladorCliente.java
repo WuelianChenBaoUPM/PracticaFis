@@ -50,10 +50,9 @@ public class ControladorCliente {
 		UPMUsers rol = getRol(info[6]); // hay que cambiar creaCliente para que me cree un alumno o un trabajador (falta crear las clases )
 		
 		Cliente c = creaClienteInterno(info,rol);
-		
-		clientes.add(c);
 		c.setId(clientes.size());
-		 
+		clientes.add(c);
+		
 		}
 		
 		else {	
@@ -62,15 +61,15 @@ public class ControladorCliente {
 			clientes.add(c);
 		}
 		}catch (RuntimeException e) {
-			ViewCliente.printException(e);
+			ViewCliente.printException(e.getMessage());
 		}
 	
 	}
 	
 	
 	private Cliente creaCliente(String[] info) {	
-		String contrasenia = cifradoUPM(info[5]);
-		
+		 
+		//la contraseña se cifra dentro del modelo
 		return 	new Cliente (Integer.parseInt(info[0]),info[1],Integer.parseInt(info[2]),Integer.parseInt(info[3]),info[4],info[5],info[6],info[7],info[8]);
 	}
 	
@@ -90,12 +89,7 @@ public class ControladorCliente {
 	}
 	
 	
-	private String cifradoUPM(String contrasenia) {
-		
-		String cifrado = Cifrado.cifrar(contrasenia);
-		
-		return cifrado;
-	}
+	
 	private UPMUsers getRol(String correo) {
 		// TODO Auto-generated method stub
 		UPMUsers rol = ObtencionDeRol.get_UPM_AccountRol(correo);

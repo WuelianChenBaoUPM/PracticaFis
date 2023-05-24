@@ -42,7 +42,7 @@ public class ControladorCurso {
 		curso.setId(cursos.size());
 		cursos.add(curso);
 		}catch(RuntimeException e) {
-			viewCurso.printException(e);
+			viewCurso.printException(e.getMessage());
 		}
 	}
 	

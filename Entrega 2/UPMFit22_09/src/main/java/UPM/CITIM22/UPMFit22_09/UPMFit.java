@@ -62,12 +62,15 @@ public class UPMFit {
 	 
 		//cursos
 		////String fechaInicio, String fechaFin, String horario, String nombre ; String sesion1 ; String sesion2
+		//Sesion TActividad actividad, int aforo, String horaFin, String horaInicio,Monitor monitor 
 		controllerCurso.altaCurso("15-02-2023,15-04-2023,10:00-14:00,Curso1;5,30,15:00,11:00,1;6,30,14:00,12:00,2");
-		
+		controllerCurso.altaCurso("10-05-2020,04-07-2023,11:00-15:00,Curso2;3,40,14:00,10:00,2;2,20,13:00,10:00,2");
+		controllerCurso.altaCurso("19-04-2021,20-09-2023,12:00-16:00,Curso3;2,20,16:00,13:00,3;1,20,12:00,11:00,2");
+				
 		//inscripciones //idCliente , idCurso , fecha
 		controllerInscripcion.inscribirseACurso("0,0,15-01-2023");
-		//controllerInscripcion.inscribirseACurso("1,1,10-01-2013");
-		//controllerInscripcion.inscribirseACurso("2,2,05-02-2023");
+		controllerInscripcion.inscribirseACurso("1,1,10-01-2013");
+		controllerInscripcion.inscribirseACurso("2,2,05-02-2023");
 		//controllerInscripcion.verInscripciones();
 		 
 	}
@@ -92,23 +95,24 @@ public class UPMFit {
 		Scanner sc = new Scanner(System.in);
 		do {
 			viewSistema.menu();
-		opcion = sc.nextInt();	
+		String info[] = datos().split("#");
+		opcion = Integer.parseInt(info[0]);	
 		switch (opcion) {
 		case 1:
-			viewSistema.opcionAltaCliente();
-			controllerCliente.altaCliente(datos());
+		 
+			controllerCliente.altaCliente(info[1]);
 			break;
 		case 2:
-			viewSistema.opcionAltaCurso();
-			controllerCurso.altaCurso(datos());
+			 
+			controllerCurso.altaCurso(info[1]);
 			break;
 		case 3:
-			viewSistema.opcionInscripcion();
-			controllerInscripcion.inscribirseACurso(datos());
+			 
+			controllerInscripcion.inscribirseACurso(info[1]);
 			break;
 		case 4:
-			viewSistema.opcionVerCurso();
-			controllerCurso.verCurso(datos());
+			 
+			controllerCurso.verCurso(info[1]);
 			break;
 
 		case 0:

@@ -28,7 +28,7 @@ public class ViewMonitor {
 		System.out.println();
 		System.out.println("Nombre : "+ monitor.getNombre() +"\nNombre de Usuario : "+monitor.getNombreUsuario()+"\nDNI : "+monitor.getDni());
 	}
-	public void printException (RuntimeException e) {
-		System.out.println(e.getMessage());
+	public void printException (String e) {
+		System.out.println(e );
 	}
 }//end ViewMonitor

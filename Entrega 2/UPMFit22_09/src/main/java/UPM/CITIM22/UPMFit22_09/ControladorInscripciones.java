@@ -41,7 +41,7 @@ public class ControladorInscripciones {
 		ins.setId(inscripciones.size());
 		inscripciones.add(ins);
 			}catch(RuntimeException e) {
-				view.printException(e);}
+				view.printException(e.getMessage());}
 	
 	}
 	public void verInscripciones() {

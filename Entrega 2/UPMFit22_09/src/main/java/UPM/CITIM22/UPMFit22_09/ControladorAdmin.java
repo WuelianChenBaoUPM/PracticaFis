@@ -27,7 +27,7 @@ public class ControladorAdmin {
 			 Administrador admin = new Administrador(Integer.parseInt(info[0]),info[1],info[2],info[3],info[4]);
 			 admins.add(admin);
 		 } catch (RuntimeException e) {
-				viewAdministrador.printException(e);
+				viewAdministrador.printException(e.getMessage());
 			}
 		
 		

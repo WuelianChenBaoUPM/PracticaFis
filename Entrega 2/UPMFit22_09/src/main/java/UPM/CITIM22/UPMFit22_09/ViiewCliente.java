@@ -39,8 +39,8 @@ public class ViiewCliente {
 		
 	}
 
-	public void printException (RuntimeException e) {
-		System.out.println(e.getMessage());
+	public void printException (String e) {
+		System.out.println(e );
 	}
 
 	

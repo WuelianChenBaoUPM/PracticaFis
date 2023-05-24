@@ -1,5 +1,7 @@
 package UPM.CITIM22.UPMFit22_09;
 
+import utilidades.Cifrado;
+
 /**
  * @author The Administrator
  * @version 1.0
@@ -15,6 +17,7 @@ public class UsuarioGenerico implements InterfazUsuarioGenerico {
 	public UsuarioGenerico() {}
 	public UsuarioGenerico(String contrasena, String correoElectronico, String nombre, String nombreUsuario){
 		this.setContrasena(contrasena);
+		this.contrasena = cifradoUPM(contrasena);
 		this.setCorreo(correoElectronico);
 		this.setNombre(nombre);
 		this.setNombreUsuario(nombreUsuario);
@@ -58,7 +61,12 @@ public class UsuarioGenerico implements InterfazUsuarioGenerico {
 	 */
 
 
-
+	private String cifradoUPM(String contrasenia) {
+		
+		String cifrado = Cifrado.cifrar(contrasenia);
+		
+		return cifrado;
+	}
 	public void setNombreUsuario(String nombreUsusario){
 		if (nombreUsusario == null|| nombreUsusario.isEmpty())
 			throw new RuntimeException("El nombre del usuario tiene que ser un cadena de caracteres no vacia");

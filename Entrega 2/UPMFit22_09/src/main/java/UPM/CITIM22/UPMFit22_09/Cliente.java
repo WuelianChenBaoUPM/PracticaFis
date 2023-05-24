@@ -60,6 +60,7 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	 */
 	public Cliente(int edad, String sexo, int peso, int tarjeta, String dni, String contrasena, String correo,
 			String nombre, String nombreUsuario){
+		//la contraseña la tienen que tener todos los usuarios cifradas por lo que la operacion esta dentro de usuarioGenerico
 		super (dni,contrasena , correo, nombre,nombreUsuario);
 		this.inscripciones= new ArrayList<>(); 
 		setEdad(edad);
