@@ -9,7 +9,12 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class ClienteTest {
+	
+	Cliente cliente;
 
+	//añadir tests de las clases que hereda cliente, como setContraseña
+	
+	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	}
@@ -20,6 +25,7 @@ public class ClienteTest {
 
 	@Before
 	public void setUp() throws Exception {
+		cliente = new Cliente();
 	}
 
 	@After
@@ -32,24 +38,8 @@ public class ClienteTest {
 	}*/
 
 	@Test
-	public void testClienteIntStringIntIntStringStringStringStringString() {
-		Cliente cliente = new Cliente(18, "hombre", 70, 5940, "57235901D", "password", "pepe@upm.es", "Pepe", "PepeUPM" );
-		
-		assertEquals(18, cliente.getEdad());
-		assertEquals("hombre", cliente.getSexo());
-		assertEquals(70, cliente.getPeso());
-		assertEquals(5940, cliente.getTarjeta());
-		assertEquals("57235901D", cliente.getDni());
-		assertEquals("password", cliente.getContrasena());
-		assertEquals("pepe@upm.es", cliente.getCorreo());
-		assertEquals("Pepe", cliente.getNombre());
-		assertEquals("PepeUPM", cliente.getNombreUsuario());
-		
-	}
-
-	@Test
 	public void testSetEdad() {
-		Cliente cliente = new Cliente();
+	
 		cliente.setEdad(18);
 		assertEquals(18, cliente.getEdad());
 		
@@ -57,30 +47,54 @@ public class ClienteTest {
 
 	@Test
 	public void testSetPeso() {
-		Cliente cliente = new Cliente();
+	
 		cliente.setPeso(70);
 		assertEquals(70, cliente.getPeso());
 	}
 
 	@Test
 	public void testSetSexo() {
-		Cliente cliente = new Cliente();
+		
 		cliente.setSexo("hombre");
 		assertEquals("hombre", cliente.getSexo());
 	}
 
 	@Test
 	public void testSetTarjeta() {
-		Cliente cliente = new Cliente();
+	
 		cliente.setTarjeta(5940);
 		assertEquals(5940, cliente.getTarjeta());
 	}
 
 	@Test
 	public void testSetId() {
-		Cliente cliente = new Cliente();
 		cliente.setId(100);
 		assertEquals(100, cliente.getId());
+	}
+	
+	public void testSetDni() {
+		cliente.setDni("57235901D");
+		assertEquals("57235901D", cliente.getDni());
+	}
+	
+	public void testSetContrasena() {
+		cliente.setContrasena("password");
+		assertEquals("password", cliente.getContrasena());
+	}
+	
+	public void testSetCorreo() {
+		cliente.setCorreo("pepe@upm.es");
+		assertEquals("pepe@upm.es", cliente.getCorreo());
+	}
+	
+	public void testSetNombre() {
+		cliente.setNombre("Pepe");
+		assertEquals("Pepe", cliente.getNombre());
+	}
+	
+	public void testSetNombreUsuario() {
+		cliente.setNombreUsuario("PepeUPM");
+		assertEquals("PepeUPM", cliente.getNombreUsuario());
 	}
 
 	/*@Test
