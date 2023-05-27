@@ -135,6 +135,9 @@ public class Cliente extends UsuarioNoAdmin implements InterfazCliente {
 	public void addInscripcionCurso(InscripcionCurso inscripcion) {
 			this.inscripciones.add(inscripcion);
 	}
+	public void removeInscripcionCurso(InscripcionCurso inscripcion) {
+		this.inscripciones.remove(inscripcion);
+}
 		
 	
 

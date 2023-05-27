@@ -47,7 +47,7 @@ public class ControladorCliente {
 		String info[] = datos.split(",");
 		
 		if (validacion(info[6])) {// comprueba si es de la UPM
-		UPMUsers rol = getRol(info[6]); // hay que cambiar creaCliente para que me cree un alumno o un trabajador (falta crear las clases )
+		UPMUsers rol = getRol(info[6]); 
 		
 		Cliente c = creaClienteInterno(info,rol);
 		c.setId(clientes.size());
@@ -70,7 +70,8 @@ public class ControladorCliente {
 	private Cliente creaCliente(String[] info) {	
 		 
 		//la contraseña se cifra dentro del modelo
-		return 	new Cliente (Integer.parseInt(info[0]),info[1],Integer.parseInt(info[2]),Integer.parseInt(info[3]),info[4],info[5],info[6],info[7],info[8]);
+		return 	new Cliente (Integer.parseInt(info[0]),info[1],Integer.parseInt(info[2]),
+				Integer.parseInt(info[3]),info[4],info[5],info[6],info[7],info[8]);
 	}
 	
 	
@@ -125,7 +126,7 @@ public class ControladorCliente {
 	//metodos de la relacion con cliente
 	
 		public void setCliente(List<Cliente> clientes)  {
-				
+				this.clientes = clientes;
 			}
 		
 		public List<Cliente> getCliente(){
@@ -134,6 +135,9 @@ public class ControladorCliente {
 			
 			
 		public void removeCliente (Cliente cliente) {
-				
+				clientes.remove(cliente);
 			}
+		public void addCliente(Cliente cliente)  {
+			this.clientes.add(cliente);
+		}
 }//end ControladorCliente
